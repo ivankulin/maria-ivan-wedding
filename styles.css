@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.hero h1 span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.divider {
+  width: 80px;
+  height: 1px;
+  background: #000;
+  margin: 32px auto;
+}
+
+.date {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.venue {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.graphic {
+  display: flex;
+  justify-content: center;
+  margin: 120px 0;
+}
+
+.details,
+.rsvp {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}

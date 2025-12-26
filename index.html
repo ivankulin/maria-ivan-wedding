@@ -1,80 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Maria & Ivan</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
 <body>
+  <main class="container">
 
-<header>
-  <div class="lang-switcher">
-    <button data-lang="da">DA</button>
-    <button data-lang="en">EN</button>
-    <button data-lang="ro">RO</button>
-    <button data-lang="bg">BG</button>
-  </div>
+    <section class="hero">
+      <h1>Maria <span>&</span> Ivan</h1>
+      <div class="divider"></div>
+      <p class="date">June 27, 2026 · 15:00</p>
+      <p class="venue">Allegården, Odensevej 104<br>5290 Marslev, Denmark</p>
+    </section>
 
-  <h1 id="title"></h1>
-  <p id="date"></p>
-</header>
+    <section class="graphic">
+      <!-- Add image / SVG / monogram here -->
+      <!-- <img src="graphic.png" alt=""> -->
+    </section>
 
-<section id="info">
-  <h2 id="welcomeTitle"></h2>
-  <p id="welcomeText"></p>
-</section>
+    <section class="details">
+      <h2>Wedding Celebration</h2>
+      <p>More details and formal invitation to follow.</p>
+    </section>
 
-<section id="rsvp">
-  <h2 id="rsvpTitle"></h2>
+    <section class="rsvp">
+      <h2>RSVP</h2>
+      <!-- your existing form goes here -->
+    </section>
 
-  <form id="rsvpForm">
-    <label>
-      <span id="nameLabel"></span>
-      <input type="text" name="name" required />
-    </label>
+    <footer>
+      <p>Maria & Ivan</p>
+    </footer>
 
-    <label>
-      <span id="attendingLabel"></span>
-      <select name="attending" id="attending">
-        <option value="yes" id="yesOption"></option>
-        <option value="no" id="noOption"></option>
-      </select>
-    </label>
-
-    <label>
-      <span id="plusOneLabel"></span>
-      <select name="plusOne">
-        <option value="no" id="plusOneNo"></option>
-        <option value="yes" id="plusOneYes"></option>
-      </select>
-    </label>
-
-    <label>
-      <span id="mealLabel"></span>
-      <select name="meal">
-        <option value="fish" id="fishOption"></option>
-        <option value="chicken" id="chickenOption"></option>
-      </select>
-    </label>
-
-    <label>
-      <span id="nightsLabel"></span>
-      <select name="nights">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
-    </label>
-
-    <button type="submit" id="submitBtn"></button>
-  </form>
-</section>
-
-<footer>
-  <p>Maria & Ivan ❤️</p>
-</footer>
-
-<script src="script.js"></script>
+  </main>
 </body>
-</html>
