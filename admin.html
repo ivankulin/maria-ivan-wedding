@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSVP Admin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+  <div class="page">
+    <header class="admin-header">
+      <a href="/" class="back-link">Back to site</a>
+      <h1>RSVP Admin</h1>
+      <button class="small-button" id="logoutBtn" type="button" hidden>Log out</button>
+    </header>
+
+    <main class="panel admin-panel">
+      <section id="loginPanel">
+        <h2>Sign in</h2>
+        <form id="adminLoginForm" class="rsvp-form">
+          <div class="form-row">
+            <label for="password">Admin password</label>
+            <input id="password" name="password" type="password" required>
+          </div>
+          <div class="form-actions">
+            <button type="submit">Sign in</button>
+            <p class="form-status" id="loginStatus" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+
+      <section id="adminPanel" hidden>
+        <div class="action-row">
+          <div class="stats" id="stats"></div>
+          <button class="small-button" type="button" id="refreshBtn">Refresh</button>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Submitted</th>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Attending</th>
+                <th>Adults</th>
+                <th>Children</th>
+                <th>Plus One</th>
+                <th>Meal</th>
+                <th>Nights</th>
+                <th>Notes</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="rsvpTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

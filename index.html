@@ -1,31 +1,163 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maria & Ivan - Wedding</title>
+  <meta name="description" content="Maria and Ivan wedding celebration. RSVP online.">
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-  <main class="container">
+  <div class="page">
+    <header class="site-header">
+      <div class="header-row">
+        <div class="brand">Maria & Ivan</div>
+        <nav class="main-nav">
+          <a href="#home" id="navHome">Home</a>
+          <a href="#ceremony" id="navCeremony">Ceremony</a>
+          <a href="#reception" id="navReception">Reception</a>
+          <a href="#info" id="navInfo">Info</a>
+          <a href="rsvp.html" id="navRsvp">RSVP</a>
+        </nav>
+      </div>
+      <div class="header-row header-row--languages">
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+          <button type="button" data-lang="en" aria-pressed="true">
+            <span class="flag flag-en" aria-hidden="true"></span>
+            <span class="lang-label">EN</span>
+          </button>
+          <button type="button" data-lang="da" aria-pressed="false">
+            <span class="flag flag-da" aria-hidden="true"></span>
+            <span class="lang-label">DA</span>
+          </button>
+          <button type="button" data-lang="ro" aria-pressed="false">
+            <span class="flag flag-ro" aria-hidden="true"></span>
+            <span class="lang-label">RO</span>
+          </button>
+          <button type="button" data-lang="bg" aria-pressed="false">
+            <span class="flag flag-bg" aria-hidden="true"></span>
+            <span class="lang-label">BG</span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-    <section class="hero">
-      <h1>Maria <span>&</span> Ivan</h1>
-      <div class="divider"></div>
-      <p class="date">June 27, 2026 · 15:00</p>
-      <p class="venue">Allegården, Odensevej 104<br>5290 Marslev, Denmark</p>
-    </section>
+    <main class="content">
+      <section class="hero" id="home">
+        <div class="section-label" id="welcomeTitle">We're getting married</div>
+        <div class="title-block">
+          <span class="title-rule"></span>
+          <h1 id="title">Maria & Ivan</h1>
+          <p class="title-date" id="date">June 27, 2026 at 15:00</p>
+          <span class="title-rule"></span>
+        </div>
+        <p class="hero-text" id="welcomeText">We can't wait to celebrate with you.</p>
 
-    <section class="graphic">
-      <!-- Add image / SVG / monogram here -->
-      <!-- <img src="graphic.png" alt=""> -->
-    </section>
+        <div class="image-placeholder hero-image">Hero image placeholder</div>
 
-    <section class="details">
-      <h2>Wedding Celebration</h2>
-      <p>More details and formal invitation to follow.</p>
-    </section>
+        <div class="countdown">
+          <div class="count-item">
+            <span class="count-number">181</span>
+            <span class="count-label" id="countDays">days</span>
+          </div>
+          <div class="count-item">
+            <span class="count-number">22</span>
+            <span class="count-label" id="countHours">hours</span>
+          </div>
+          <div class="count-item">
+            <span class="count-number">49</span>
+            <span class="count-label" id="countMinutes">minutes</span>
+          </div>
+          <div class="count-item">
+            <span class="count-number">27</span>
+            <span class="count-label" id="countSeconds">seconds</span>
+          </div>
+        </div>
+      </section>
 
-    <section class="rsvp">
-      <h2>RSVP</h2>
-      <!-- your existing form goes here -->
-    </section>
+      <section class="intro">
+        <h2 id="detailsTitle">Wedding Celebration</h2>
+        <p id="detailsText">More details and a formal invitation to follow.</p>
+      </section>
 
-    <footer>
-      <p>Maria & Ivan</p>
+      <section class="event-section" id="ceremony">
+        <h2 id="ceremonyTitle">Ceremony</h2>
+        <article class="event-card">
+          <div class="image-placeholder">Ceremony photo placeholder</div>
+          <div class="event-content">
+            <h3 id="ceremonyLead">15:00 - Ceremony in Odense C</h3>
+            <p id="ceremonyText">Our ceremony begins at the church. Follow the signs to the center and the church.</p>
+            <p class="event-address"><span id="ceremonyAddressLabel">Address:</span> <span id="ceremonyAddress">Store Torv, 8000 Aarhus</span></p>
+          </div>
+        </article>
+        <div class="map-placeholder">Map placeholder</div>
+      </section>
+
+      <section class="event-section" id="reception">
+        <h2 id="receptionTitle">Dinner and celebration</h2>
+        <article class="event-card">
+          <div class="image-placeholder">Reception photo placeholder</div>
+          <div class="event-content">
+            <h3 id="receptionLead">Dinner and celebration in Risskov</h3>
+            <p id="receptionText">Around 16:00 the couple arrives at the venue for dinner and party. The venue is about one kilometer from the church.</p>
+            <p class="event-address"><span id="receptionAddressLabel">Address:</span> <span id="receptionAddress">Vejen 87, 8240 Risskov</span></p>
+          </div>
+        </article>
+      </section>
+
+      <section class="info-section" id="info">
+        <h2 id="infoTitle">Good to know</h2>
+        <div class="info-grid">
+          <article class="info-card">
+            <div class="image-placeholder">Food photo placeholder</div>
+            <div class="info-content">
+              <h3 id="infoOneTitle">Food and drinks</h3>
+              <p id="infoOneText">Starter, main course, and wedding cake. Drinks are served during dinner and at the bar.</p>
+            </div>
+          </article>
+          <article class="info-card">
+            <div class="image-placeholder">Accommodation photo placeholder</div>
+            <div class="info-content">
+              <h3 id="infoTwoTitle">Accommodation</h3>
+              <p id="infoTwoText">If you are traveling from afar, we recommend Hotel Rubin near the venue.</p>
+            </div>
+          </article>
+          <article class="info-card">
+            <div class="image-placeholder">Dress code photo placeholder</div>
+            <div class="info-content">
+              <h3 id="infoThreeTitle">Dress code: Dark suit</h3>
+              <p id="infoThreeText">Men: dark suit with shirt and tie or bow tie. Women: an elegant dress.</p>
+            </div>
+          </article>
+          <article class="info-card">
+            <div class="image-placeholder">Kids info placeholder</div>
+            <div class="info-content">
+              <h3 id="infoFourTitle">Kids</h3>
+              <p id="infoFourText">We are still considering the best option for children. More info soon.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="rsvp-cta">
+        <h2 id="rsvpCtaTitle">RSVP</h2>
+        <p id="rsvpCtaText">Use your invitation code to access the RSVP form.</p>
+        <div class="rsvp-code">
+          <label for="rsvpCodeIndex" id="codeLabel">RSVP code</label>
+          <div class="code-row">
+            <input id="rsvpCodeIndex" name="rsvpCodeIndex" type="text" placeholder="Enter your code">
+            <button type="button" id="codeBtn">Unlock</button>
+          </div>
+          <p class="form-status" id="codeStatus" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="footerText">Maria & Ivan</p>
     </footer>
+  </div>
 
-  </main>
+  <script src="script.js"></script>
 </body>
+</html>
