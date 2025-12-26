@@ -400,8 +400,16 @@ body {
   gap: 8px;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .form-row.full {
   grid-column: 1 / -1;
+}
+
+#plusOneMount {
+  display: contents;
 }
 
 label,
@@ -428,6 +436,19 @@ textarea {
 }
 
 .radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.checkbox {
   display: inline-flex;
   align-items: center;
   gap: 8px;

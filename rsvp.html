@@ -17,7 +17,7 @@
           <a href="index.html#ceremony" id="navCeremony">Ceremony</a>
           <a href="index.html#reception" id="navReception">Reception</a>
           <a href="index.html#info" id="navInfo">Info</a>
-          <a href="rsvp.html" id="navRsvp">RSVP</a>
+          <a href="index.html#rsvp" id="navRsvp">RSVP</a>
         </nav>
       </div>
       <div class="header-row header-row--languages">
@@ -57,6 +57,11 @@
               <input id="name" name="name" type="text" placeholder="Full name" required>
             </div>
 
+            <div class="form-row" id="secondNameRow" hidden>
+              <label for="secondName" id="secondNameLabel">Partner name</label>
+              <input id="secondName" name="second_name" type="text" placeholder="Partner name">
+            </div>
+
             <div class="form-row">
               <label for="email" id="emailLabel">Email (optional)</label>
               <input id="email" name="email" type="email" placeholder="name@email.com">
@@ -76,52 +81,51 @@
               </div>
             </div>
 
-            <div class="form-row full" id="plusOneRow">
-              <span class="label" id="plusOneLabel">Will you bring a +1?</span>
+            <div id="plusOneMount"></div>
+
+            <div class="form-row">
+              <span class="label" id="overnightLabel">Overnight stay at the venue?</span>
               <div class="radio-group">
                 <label class="radio">
-                  <input type="radio" name="plus_one" value="yes">
-                  <span id="plusOneYes">Yes</span>
+                  <input type="radio" name="overnight" value="yes">
+                  <span id="overnightYes">Yes</span>
                 </label>
                 <label class="radio">
-                  <input type="radio" name="plus_one" value="no">
-                  <span id="plusOneNo">No</span>
+                  <input type="radio" name="overnight" value="no">
+                  <span id="overnightNo">No</span>
                 </label>
               </div>
             </div>
 
-            <div class="form-row" id="adultsRow">
-              <label for="adults" id="adultsLabel">Adults attending</label>
-              <select id="adults" name="adults"></select>
-            </div>
-
-            <div class="form-row" id="childrenRow">
-              <label for="children" id="childrenLabel">Children attending</label>
-              <select id="children" name="children"></select>
-            </div>
-
-            <div class="form-row">
-              <label for="meal" id="mealLabel">Meal preference</label>
-              <select id="meal" name="meal">
-                <option value="fish" id="fishOption">Fish</option>
-                <option value="chicken" id="chickenOption">Chicken</option>
-                <option value="vegetarian" id="vegetarianOption">Vegetarian</option>
-              </select>
-            </div>
-
-            <div class="form-row">
-              <label for="nights" id="nightsLabel">Nights staying at the venue</label>
-              <select id="nights" name="nights">
-                <option value="0" id="nights0Option">Not staying overnight</option>
-                <option value="1" id="nights1Option">1 night</option>
-                <option value="2" id="nights2Option">2 nights</option>
-                <option value="3" id="nights3Option">3 nights</option>
-              </select>
+            <div class="form-row full" id="overnightDatesRow" hidden>
+              <span class="label" id="overnightDatesLabel">Which nights?</span>
+              <div class="checkbox-group">
+                <label class="checkbox">
+                  <input type="checkbox" name="overnight_dates" value="2026-06-25">
+                  <span id="overnightDate1">25 June</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="overnight_dates" value="2026-06-26">
+                  <span id="overnightDate2">26 June</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="overnight_dates" value="2026-06-27">
+                  <span id="overnightDate3">27 June</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="overnight_dates" value="2026-06-28">
+                  <span id="overnightDate4">28 June</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="overnight_dates" value="2026-06-29">
+                  <span id="overnightDate5">29 June</span>
+                </label>
+              </div>
             </div>
 
             <div class="form-row full">
               <label for="notes" id="notesLabel">Notes or allergies</label>
-              <textarea id="notes" name="notes" rows="4" placeholder="Anything we should know?"></textarea>
+              <textarea id="notes" name="notes" rows="4" placeholder="Food preferences, kids, or anything else."></textarea>
             </div>
           </div>
 

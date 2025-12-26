@@ -25,18 +25,21 @@ const translations = {
     yes: "Yes",
     no: "No",
     plusOneLabel: "Will you bring a +1?",
-    adultsLabel: "Adults attending",
-    childrenLabel: "Children attending",
-    mealLabel: "Meal preference",
-    fish: "Fish",
-    chicken: "Chicken",
-    vegetarian: "Vegetarian",
-    nightsLabel: "Nights staying at the venue",
-    nights0: "Not staying overnight",
-    nights1: "1 night",
-    nights2: "2 nights",
-    nights3: "3 nights",
+    plusOneNameLabel: "Plus one name",
+    plusOneNamePlaceholder: "Guest name",
+    secondNameLabel: "Partner name",
+    secondNamePlaceholder: "Partner name",
+    overnightLabel: "Overnight stay at the venue?",
+    overnightYes: "Yes",
+    overnightNo: "No",
+    overnightDatesLabel: "Which nights?",
+    overnightDate1: "25 June",
+    overnightDate2: "26 June",
+    overnightDate3: "27 June",
+    overnightDate4: "28 June",
+    overnightDate5: "29 June",
     notesLabel: "Notes or allergies",
+    notesPlaceholder: "Food preferences, kids, or anything else.",
     submit: "Send RSVP",
     statusSuccess: "Thank you! Your RSVP has been received.",
     statusError: "Something went wrong. Please try again.",
@@ -59,18 +62,21 @@ const translations = {
     yes: "Ja",
     no: "Nej",
     plusOneLabel: "Medbringer du en +1?",
-    adultsLabel: "Voksne der deltager",
-    childrenLabel: "Børn der deltager",
-    mealLabel: "Menuvalg",
-    fish: "Fisk",
-    chicken: "Kylling",
-    vegetarian: "Vegetar",
-    nightsLabel: "Antal nætter på stedet",
-    nights0: "Overnatter ikke",
-    nights1: "1 nat",
-    nights2: "2 nætter",
-    nights3: "3 nætter",
+    plusOneNameLabel: "Navn på +1",
+    plusOneNamePlaceholder: "Gæstens navn",
+    secondNameLabel: "Navn på partner",
+    secondNamePlaceholder: "Partners navn",
+    overnightLabel: "Overnatning på stedet?",
+    overnightYes: "Ja",
+    overnightNo: "Nej",
+    overnightDatesLabel: "Hvilke nætter?",
+    overnightDate1: "25. juni",
+    overnightDate2: "26. juni",
+    overnightDate3: "27. juni",
+    overnightDate4: "28. juni",
+    overnightDate5: "29. juni",
     notesLabel: "Noter eller allergier",
+    notesPlaceholder: "Madønsker, børn eller andet.",
     submit: "Send svar",
     statusSuccess: "Tak! Vi har modtaget dit svar.",
     statusError: "Noget gik galt. Prøv igen.",
@@ -93,18 +99,21 @@ const translations = {
     yes: "Da",
     no: "Nu",
     plusOneLabel: "Vii cu +1?",
-    adultsLabel: "Adulți participanți",
-    childrenLabel: "Copii participanți",
-    mealLabel: "Preferință meniu",
-    fish: "Pește",
-    chicken: "Pui",
-    vegetarian: "Vegetarian",
-    nightsLabel: "Număr de nopți la locație",
-    nights0: "Fără cazare",
-    nights1: "1 noapte",
-    nights2: "2 nopți",
-    nights3: "3 nopți",
+    plusOneNameLabel: "Numele +1",
+    plusOneNamePlaceholder: "Numele invitatului",
+    secondNameLabel: "Numele partenerului",
+    secondNamePlaceholder: "Numele partenerului",
+    overnightLabel: "Cazare la locație?",
+    overnightYes: "Da",
+    overnightNo: "Nu",
+    overnightDatesLabel: "Ce nopți?",
+    overnightDate1: "25 iunie",
+    overnightDate2: "26 iunie",
+    overnightDate3: "27 iunie",
+    overnightDate4: "28 iunie",
+    overnightDate5: "29 iunie",
     notesLabel: "Observații sau alergii",
+    notesPlaceholder: "Preferințe alimentare, copii sau altceva.",
     submit: "Trimite",
     statusSuccess: "Mulțumim! Am primit răspunsul tău.",
     statusError: "Ceva nu a mers bine. Te rugăm să încerci din nou.",
@@ -127,18 +136,21 @@ const translations = {
     yes: "Да",
     no: "Не",
     plusOneLabel: "Ще доведете ли +1?",
-    adultsLabel: "Брой възрастни",
-    childrenLabel: "Брой деца",
-    mealLabel: "Предпочитано меню",
-    fish: "Риба",
-    chicken: "Пиле",
-    vegetarian: "Вегетарианско",
-    nightsLabel: "Нощувки на място",
-    nights0: "Без нощувка",
-    nights1: "1 нощ",
-    nights2: "2 нощувки",
-    nights3: "3 нощувки",
+    plusOneNameLabel: "Име на +1",
+    plusOneNamePlaceholder: "Име на госта",
+    secondNameLabel: "Име на партньора",
+    secondNamePlaceholder: "Име на партньора",
+    overnightLabel: "Нощувка на място?",
+    overnightYes: "Да",
+    overnightNo: "Не",
+    overnightDatesLabel: "Кои нощи?",
+    overnightDate1: "25 юни",
+    overnightDate2: "26 юни",
+    overnightDate3: "27 юни",
+    overnightDate4: "28 юни",
+    overnightDate5: "29 юни",
     notesLabel: "Бележки или алергии",
+    notesPlaceholder: "Храна, деца или нещо друго.",
     submit: "Изпрати",
     statusSuccess: "Благодарим! Получихме вашия отговор.",
     statusError: "Нещо се обърка. Опитайте отново.",
@@ -150,11 +162,13 @@ const form = document.getElementById("rsvpForm");
 const formStatus = document.getElementById("formStatus");
 const langButtons = document.querySelectorAll(".lang-switcher button");
 const codeStatus = document.getElementById("codeStatus");
-const plusOneRow = document.getElementById("plusOneRow");
-const adultsRow = document.getElementById("adultsRow");
-const adultsSelect = document.getElementById("adults");
-const childrenRow = document.getElementById("childrenRow");
-const childrenSelect = document.getElementById("children");
+const plusOneMount = document.getElementById("plusOneMount");
+let plusOneRow = null;
+let plusOneNameRow = null;
+let plusOneNameInput = null;
+const overnightDatesRow = document.getElementById("overnightDatesRow");
+const secondNameRow = document.getElementById("secondNameRow");
+const secondNameInput = document.getElementById("secondName");
 
 let activeCode = null;
 let activeRule = null;
@@ -176,22 +190,30 @@ function setLanguage(lang) {
   document.getElementById("attendingLabel").textContent = t.attendingLabel;
   document.getElementById("yesOption").textContent = t.yes;
   document.getElementById("noOption").textContent = t.no;
-  document.getElementById("plusOneLabel").textContent = t.plusOneLabel;
-  document.getElementById("plusOneYes").textContent = t.yes;
-  document.getElementById("plusOneNo").textContent = t.no;
-  document.getElementById("adultsLabel").textContent = t.adultsLabel;
-  document.getElementById("childrenLabel").textContent = t.childrenLabel;
-  document.getElementById("mealLabel").textContent = t.mealLabel;
-  document.getElementById("fishOption").textContent = t.fish;
-  document.getElementById("chickenOption").textContent = t.chicken;
-  document.getElementById("vegetarianOption").textContent = t.vegetarian;
-  document.getElementById("nightsLabel").textContent = t.nightsLabel;
-  document.getElementById("nights0Option").textContent = t.nights0;
-  document.getElementById("nights1Option").textContent = t.nights1;
-  document.getElementById("nights2Option").textContent = t.nights2;
-  document.getElementById("nights3Option").textContent = t.nights3;
+  if (plusOneRow) {
+    plusOneRow.querySelector("#plusOneLabel").textContent = t.plusOneLabel;
+    plusOneRow.querySelector("#plusOneYes").textContent = t.yes;
+    plusOneRow.querySelector("#plusOneNo").textContent = t.no;
+  }
+  if (plusOneNameRow && plusOneNameInput) {
+    plusOneNameRow.querySelector("#plusOneNameLabel").textContent = t.plusOneNameLabel;
+    plusOneNameInput.setAttribute("placeholder", t.plusOneNamePlaceholder);
+  }
+  document.getElementById("overnightLabel").textContent = t.overnightLabel;
+  document.getElementById("overnightYes").textContent = t.overnightYes;
+  document.getElementById("overnightNo").textContent = t.overnightNo;
+  document.getElementById("overnightDatesLabel").textContent = t.overnightDatesLabel;
+  document.getElementById("overnightDate1").textContent = t.overnightDate1;
+  document.getElementById("overnightDate2").textContent = t.overnightDate2;
+  document.getElementById("overnightDate3").textContent = t.overnightDate3;
+  document.getElementById("overnightDate4").textContent = t.overnightDate4;
+  document.getElementById("overnightDate5").textContent = t.overnightDate5;
   document.getElementById("notesLabel").textContent = t.notesLabel;
+  document.getElementById("notes").setAttribute("placeholder", t.notesPlaceholder);
   document.getElementById("submitBtn").textContent = t.submit;
+
+  document.getElementById("secondNameLabel").textContent = t.secondNameLabel;
+  document.getElementById("secondName").setAttribute("placeholder", t.secondNamePlaceholder);
 
   if (codeStatus.dataset.state === "error") {
     codeStatus.textContent = t.invalidCode;
@@ -206,31 +228,11 @@ function setLanguage(lang) {
   });
 }
 
-function updateOptions(select, maxValue, startAtOne) {
-  select.innerHTML = "";
-  const start = startAtOne ? 1 : 0;
-  for (let i = start; i <= maxValue; i += 1) {
-    const option = document.createElement("option");
-    option.value = `${i}`;
-    option.textContent = `${i}`;
-    select.appendChild(option);
-  }
-}
-
 function applyCodeRules(rule) {
   activeRule = rule;
-  plusOneRow.hidden = !rule.allowPlusOne;
-  adultsRow.hidden = rule.allowPlusOne;
-  updateOptions(adultsSelect, rule.maxAdults, true);
-
-  childrenRow.hidden = rule.maxChildren === 0;
-  updateOptions(childrenSelect, rule.maxChildren, false);
-
-  if (!rule.allowPlusOne) {
-    form.elements["plus_one"].forEach((input) => {
-      input.checked = false;
-    });
-  }
+  renderPlusOneSection(rule.allowPlusOne);
+  updateSecondNameVisibility();
+  updateOvernightVisibility();
 }
 
 function updateAttendingState() {
@@ -244,10 +246,100 @@ function updateAttendingState() {
     });
   }
 
-  adultsSelect.disabled = disableExtras || activeRule?.allowPlusOne === true;
-  childrenSelect.disabled = disableExtras;
-  form.elements["meal"].disabled = disableExtras;
-  form.elements["nights"].disabled = disableExtras;
+  if (plusOneNameInput) {
+    plusOneNameInput.disabled = disableExtras;
+  }
+  if (form.elements["overnight"]) {
+    form.elements["overnight"].forEach((input) => {
+      input.disabled = disableExtras;
+      if (disableExtras) input.checked = false;
+    });
+  }
+
+  updatePlusOneNameVisibility();
+  updateSecondNameVisibility();
+  updateOvernightVisibility();
+}
+
+function updatePlusOneNameVisibility() {
+  if (!plusOneNameRow || !plusOneNameInput) return;
+
+  const plusOneValue = form.elements["plus_one"]?.value;
+  const attending = form.elements["attending"].value;
+  const shouldShow = activeRule?.allowPlusOne && plusOneValue === "yes" && attending !== "no";
+
+  plusOneNameRow.hidden = !shouldShow;
+  plusOneNameInput.required = shouldShow;
+  if (!shouldShow) {
+    plusOneNameInput.value = "";
+  }
+}
+
+function updateSecondNameVisibility() {
+  const attending = form.elements["attending"].value;
+  const shouldShow = activeRule?.isCouple && attending !== "no";
+
+  secondNameRow.hidden = !shouldShow;
+  secondNameInput.required = false;
+  if (!shouldShow) {
+    secondNameInput.value = "";
+  }
+}
+
+function updateOvernightVisibility() {
+  const attending = form.elements["attending"].value;
+  const overnightValue = form.elements["overnight"]?.value;
+  const shouldShow = attending !== "no" && overnightValue === "yes";
+
+  overnightDatesRow.hidden = !shouldShow;
+  form.elements["overnight_dates"].forEach((input) => {
+    input.disabled = !shouldShow;
+    if (!shouldShow) input.checked = false;
+  });
+}
+
+function renderPlusOneSection(allowPlusOne) {
+  plusOneMount.innerHTML = "";
+  plusOneRow = null;
+  plusOneNameRow = null;
+  plusOneNameInput = null;
+
+  if (!allowPlusOne) {
+    return;
+  }
+
+  const t = translations[document.documentElement.lang] || translations.en;
+
+  const plusOneWrapper = document.createElement("div");
+  plusOneWrapper.className = "form-row full";
+  plusOneWrapper.innerHTML = `
+    <span class="label" id="plusOneLabel">${t.plusOneLabel}</span>
+    <div class="radio-group">
+      <label class="radio">
+        <input type="radio" name="plus_one" value="yes">
+        <span id="plusOneYes">${t.yes}</span>
+      </label>
+      <label class="radio">
+        <input type="radio" name="plus_one" value="no">
+        <span id="plusOneNo">${t.no}</span>
+      </label>
+    </div>
+  `;
+
+  const plusOneNameWrapper = document.createElement("div");
+  plusOneNameWrapper.className = "form-row full";
+  plusOneNameWrapper.hidden = true;
+  plusOneNameWrapper.innerHTML = `
+    <label for="plusOneName" id="plusOneNameLabel">${t.plusOneNameLabel}</label>
+    <input id="plusOneName" name="plus_one_name" type="text" placeholder="${t.plusOneNamePlaceholder}">
+  `;
+
+  plusOneMount.appendChild(plusOneWrapper);
+  plusOneMount.appendChild(plusOneNameWrapper);
+
+  plusOneRow = plusOneWrapper;
+  plusOneNameRow = plusOneNameWrapper;
+  plusOneNameInput = plusOneNameWrapper.querySelector("#plusOneName");
 }
 
 function unlockWithCode(rawCode) {
@@ -264,11 +356,14 @@ function unlockWithCode(rawCode) {
     return;
   }
 
+  const isCoupleCode = code.includes("-");
+  const resolvedRule = { ...rule, allowPlusOne: !isCoupleCode, isCouple: isCoupleCode };
+
   activeCode = code;
   codeStatus.dataset.state = "";
   codeStatus.textContent = "";
   form.hidden = false;
-  applyCodeRules(rule);
+  applyCodeRules(resolvedRule);
   updateAttendingState();
 }
 
@@ -279,6 +374,12 @@ langButtons.forEach((btn) => {
 form.addEventListener("change", (event) => {
   if (event.target.name === "attending") {
     updateAttendingState();
+  }
+  if (event.target.name === "plus_one") {
+    updatePlusOneNameVisibility();
+  }
+  if (event.target.name === "overnight") {
+    updateOvernightVisibility();
   }
 });
 
@@ -296,24 +397,9 @@ form.addEventListener("submit", async (event) => {
   const attending = form.elements["attending"].value;
   const plusOneValue = form.elements["plus_one"]?.value || "";
 
-  let adults = 0;
-  let children = 0;
-
-  if (attending === "yes") {
-    if (activeRule.allowPlusOne) {
-      adults = plusOneValue === "yes" ? 2 : 1;
-    } else {
-      adults = Number(adultsSelect.value || activeRule.maxAdults);
-    }
-
-    children = Number(childrenSelect.value || 0);
-  }
-
   const formData = new FormData(form);
   formData.append("code", activeCode);
   formData.append("household", activeRule.household);
-  formData.append("adults", `${adults}`);
-  formData.append("children", `${children}`);
   formData.append("language", activeLang);
   formData.append("attending", attending);
 
@@ -322,6 +408,26 @@ form.addEventListener("submit", async (event) => {
     formStatus.textContent = t.requiredField;
     return;
   }
+
+  if (activeRule.allowPlusOne && plusOneValue === "yes" && !formData.get("plus_one_name")) {
+    formStatus.dataset.state = "error";
+    formStatus.textContent = t.requiredField;
+    return;
+  }
+
+  const overnightValue = form.elements["overnight"]?.value || "";
+  const overnightDates = Array.from(form.elements["overnight_dates"] || [])
+    .filter((input) => input.checked)
+    .map((input) => input.value);
+
+  if (attending === "yes" && overnightValue === "yes" && overnightDates.length === 0) {
+    formStatus.dataset.state = "error";
+    formStatus.textContent = t.requiredField;
+    return;
+  }
+
+  formData.append("overnight", overnightValue);
+  formData.append("overnight_dates", overnightDates.join(", "));
 
   formStatus.textContent = "";
   formStatus.dataset.state = "";
