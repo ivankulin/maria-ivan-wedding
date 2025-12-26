@@ -57,19 +57,19 @@
 
         <div class="countdown">
           <div class="count-item">
-            <span class="count-number">181</span>
+            <span class="count-number" id="countNumberDays">181</span>
             <span class="count-label" id="countDays">days</span>
           </div>
           <div class="count-item">
-            <span class="count-number">22</span>
+            <span class="count-number" id="countNumberHours">22</span>
             <span class="count-label" id="countHours">hours</span>
           </div>
           <div class="count-item">
-            <span class="count-number">49</span>
+            <span class="count-number" id="countNumberMinutes">49</span>
             <span class="count-label" id="countMinutes">minutes</span>
           </div>
           <div class="count-item">
-            <span class="count-number">27</span>
+            <span class="count-number" id="countNumberSeconds">27</span>
             <span class="count-label" id="countSeconds">seconds</span>
           </div>
         </div>
@@ -82,15 +82,25 @@
 
       <section class="event-section" id="ceremony">
         <h2 id="ceremonyTitle">Ceremony</h2>
+        <div class="event-media">
+          <img class="event-image" src="ceremony.jpg" alt="Ceremony location">
+          <div class="map-embed" aria-label="Map to the ceremony location">
+            <iframe
+              title="Ronæsbrovej 5, 5580 Nørre Aaby"
+              src="https://www.google.com/maps?q=Ron%C3%A6sbrovej%205%2C%205580%20N%C3%B8rre%20Aaby&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
         <article class="event-card">
-          <div class="image-placeholder">Ceremony photo placeholder</div>
           <div class="event-content">
-            <h3 id="ceremonyLead">15:00 - Ceremony in Odense C</h3>
+            <h3 id="ceremonyLead">15:00 - Ceremony at Sophienlyst Slot</h3>
             <p id="ceremonyText">Our ceremony begins at the church. Follow the signs to the center and the church.</p>
-            <p class="event-address"><span id="ceremonyAddressLabel">Address:</span> <span id="ceremonyAddress">Store Torv, 8000 Aarhus</span></p>
+            <p class="event-address"><span id="ceremonyAddressLabel">Address:</span> <span id="ceremonyAddress">Ronæsbrovej 5, 5580 Nørre Aaby</span></p>
           </div>
         </article>
-        <div class="map-placeholder">Map placeholder</div>
       </section>
 
       <section class="event-section" id="reception">

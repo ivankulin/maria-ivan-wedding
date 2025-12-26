@@ -19,10 +19,10 @@ const translations = {
     detailsTitle: "Wedding Celebration",
     detailsText: "More details and a formal invitation to follow.",
     ceremonyTitle: "Ceremony",
-    ceremonyLead: "15:00 - Ceremony in Odense C",
+    ceremonyLead: "15:00 - Ceremony in Sophienlyst Slot",
     ceremonyText: "Our ceremony begins at the church. Follow the signs to the center and the church.",
     ceremonyAddressLabel: "Address:",
-    ceremonyAddress: "Store Torv, 8000 Aarhus",
+    ceremonyAddress: "Ronæsbrovej 5, 5580 Nørre Aaby",
     receptionTitle: "Dinner and celebration",
     receptionLead: "Dinner and celebration in Risskov",
     receptionText: "Around 16:00 the couple arrives at the venue for dinner and party. The venue is about one kilometer from the church.",
@@ -60,10 +60,10 @@ const translations = {
     detailsTitle: "Bryllupsfest",
     detailsText: "Flere detaljer og formel invitation følger snart.",
     ceremonyTitle: "Vielse",
-    ceremonyLead: "15:00 - Vielse i Odense C",
+    ceremonyLead: "15:00 - Vielse i Sophienlyst Slot",
     ceremonyText: "Klokken tre begynder vores vielse i Vor Frue Kirke i Aarhus. Du finder lettest derhen ved at følge skiltene mod centrum og kirken.",
     ceremonyAddressLabel: "Adresse:",
-    ceremonyAddress: "Store Torv, 8000 Aarhus",
+    ceremonyAddress: "Ronæsbrovej 5, 5580 Nørre Aaby",
     receptionTitle: "Middag og fest",
     receptionLead: "Middag og fest i Risskov",
     receptionText: "Omkring kl. 16 ankommer brudeparret til forsamlingshuset i Risskov. Der serveres middag efterfulgt af fest. Fra kirken til festlokalet er der cirka én kilometer.",
@@ -101,10 +101,10 @@ const translations = {
     detailsTitle: "Sărbătoare de nuntă",
     detailsText: "Mai multe detalii și invitația oficială urmează.",
     ceremonyTitle: "Cununie",
-    ceremonyLead: "15:00 - Cununie în Odense C",
+    ceremonyLead: "15:00 - Cununie în Sophienlyst Slot",
     ceremonyText: "Cununia noastră începe la biserică. Urmează indicatoarele spre centru și biserică.",
     ceremonyAddressLabel: "Adresă:",
-    ceremonyAddress: "Store Torv, 8000 Aarhus",
+    ceremonyAddress: "Ronæsbrovej 5, 5580 Nørre Aaby",
     receptionTitle: "Cină și petrecere",
     receptionLead: "Cină și petrecere în Risskov",
     receptionText: "În jurul orei 16:00 ajungem la locație pentru cină și petrecere. Locația este la aproximativ un kilometru de biserică.",
@@ -142,10 +142,10 @@ const translations = {
     detailsTitle: "Сватбено тържество",
     detailsText: "Още детайли и официална покана ще последват.",
     ceremonyTitle: "Венчавка",
-    ceremonyLead: "15:00 - Венчавка в Оденсе C",
+    ceremonyLead: "15:00 - Венчавка в Sophienlyst Slot",
     ceremonyText: "Церемонията започва в църквата. Следвайте табелите към центъра и църквата.",
     ceremonyAddressLabel: "Адрес:",
-    ceremonyAddress: "Store Torv, 8000 Aarhus",
+    ceremonyAddress: "Ronæsbrovej 5, 5580 Nørre Aaby",
     receptionTitle: "Вечеря и празненство",
     receptionLead: "Вечеря и празненство в Рисков",
     receptionText: "Около 16:00 пристигаме в залата за вечеря и празненство. От църквата до мястото са около един километър.",
@@ -176,6 +176,10 @@ const langButtons = document.querySelectorAll(".lang-switcher button");
 const codeInput = document.getElementById("rsvpCodeIndex");
 const codeButton = document.getElementById("codeBtn");
 const codeStatus = document.getElementById("codeStatus");
+const countDaysEl = document.getElementById("countNumberDays");
+const countHoursEl = document.getElementById("countNumberHours");
+const countMinutesEl = document.getElementById("countNumberMinutes");
+const countSecondsEl = document.getElementById("countNumberSeconds");
 
 function setLanguage(lang) {
   const t = translations[lang];
@@ -260,3 +264,23 @@ codeInput.addEventListener("keydown", (event) => {
 
 const browserLang = navigator.language.slice(0, 2);
 setLanguage(translations[browserLang] ? browserLang : "en");
+
+function updateCountdown() {
+  const target = new Date(2026, 5, 27, 15, 0, 0);
+  const now = new Date();
+  let diff = Math.max(0, target - now);
+
+  const totalSeconds = Math.floor(diff / 1000);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  if (countDaysEl) countDaysEl.textContent = `${days}`;
+  if (countHoursEl) countHoursEl.textContent = `${hours}`;
+  if (countMinutesEl) countMinutesEl.textContent = `${minutes}`;
+  if (countSecondsEl) countSecondsEl.textContent = `${seconds}`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
