@@ -329,13 +329,30 @@ body {
 .info-grid {
   display: grid;
   gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .info-card {
   border: 1px solid var(--soft-line);
-  padding: 20px;
+  padding: 0;
   display: grid;
   gap: 16px;
+  background: #ffffff;
+}
+
+.info-card .image-placeholder,
+.info-image {
+  height: 300px;
+  border: none;
+  border-bottom: 1px solid var(--soft-line);
+  border-top: 1px solid var(--soft-line);
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info-content {
+  padding: 10px;
 }
 
 .info-card h3 {
@@ -509,6 +526,13 @@ button {
   color: var(--muted);
 }
 
+.form-status[data-state="success"] {
+  color: var(--ink);
+  border: 1px solid var(--soft-line);
+  padding: 10px 12px;
+  background: #fafafa;
+}
+
 .footer {
   max-width: 980px;
   margin: 48px auto 0;
@@ -544,6 +568,10 @@ button {
 
   .main-nav {
     gap: 10px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
   }
 
   .rsvp {

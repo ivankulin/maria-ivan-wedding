@@ -9,6 +9,17 @@ This is a static wedding website designed for GitHub Pages, with a separate RSVP
 
 RSVP submissions will be delivered by Formspree (email and dashboard).
 
+## Translations
+
+All copy lives in `i18n/` as one JSON file per language:
+
+- `i18n/en.json`
+- `i18n/da.json`
+- `i18n/ro.json`
+- `i18n/bg.json`
+
+Each file includes `index` and `rsvp` sections so native speakers can review text easily.
+
 ## RSVP codes
 
 Codes and rules live in `rsvp.js`. The default list is:

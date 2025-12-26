@@ -7,156 +7,9 @@ const codeRules = {
   "STOYAN": { household: "Stoyan", maxAdults: 2, maxChildren: 0, allowPlusOne: true }
 };
 
-const translations = {
-  en: {
-    navHome: "Home",
-    navCeremony: "Ceremony",
-    navReception: "Reception",
-    navInfo: "Info",
-    navRsvp: "RSVP",
-    rsvpTitle: "RSVP",
-    rsvpIntro: "Please reply by May 1, 2026.",
-    codeLabel: "RSVP code",
-    codeButton: "Unlock",
-    invalidCode: "Invalid code.",
-    nameLabel: "Your name",
-    emailLabel: "Email (optional)",
-    attendingLabel: "Will you attend?",
-    yes: "Yes",
-    no: "No",
-    plusOneLabel: "Will you bring a +1?",
-    plusOneNameLabel: "Plus one name",
-    plusOneNamePlaceholder: "Guest name",
-    secondNameLabel: "Partner name",
-    secondNamePlaceholder: "Partner name",
-    overnightLabel: "Overnight stay at the venue?",
-    overnightYes: "Yes",
-    overnightNo: "No",
-    overnightDatesLabel: "Which nights?",
-    overnightDate1: "25 June",
-    overnightDate2: "26 June",
-    overnightDate3: "27 June",
-    overnightDate4: "28 June",
-    overnightDate5: "29 June",
-    notesLabel: "Notes or allergies",
-    notesPlaceholder: "Food preferences, kids, or anything else.",
-    submit: "Send RSVP",
-    statusSuccess: "Thank you! Your RSVP has been received.",
-    statusError: "Something went wrong. Please try again.",
-    requiredField: "Please fill in the required fields."
-  },
-  da: {
-    navHome: "Start",
-    navCeremony: "Vielse",
-    navReception: "Festen",
-    navInfo: "Godt at vide",
-    navRsvp: "Tilmelding",
-    rsvpTitle: "Tilmelding",
-    rsvpIntro: "Svar venligst senest 1. maj 2026.",
-    codeLabel: "Tilmeldingskode",
-    codeButton: "Lås op",
-    invalidCode: "Ugyldig kode.",
-    nameLabel: "Dit navn",
-    emailLabel: "Email (valgfri)",
-    attendingLabel: "Deltager du?",
-    yes: "Ja",
-    no: "Nej",
-    plusOneLabel: "Medbringer du en +1?",
-    plusOneNameLabel: "Navn på +1",
-    plusOneNamePlaceholder: "Gæstens navn",
-    secondNameLabel: "Navn på partner",
-    secondNamePlaceholder: "Partners navn",
-    overnightLabel: "Overnatning på stedet?",
-    overnightYes: "Ja",
-    overnightNo: "Nej",
-    overnightDatesLabel: "Hvilke nætter?",
-    overnightDate1: "25. juni",
-    overnightDate2: "26. juni",
-    overnightDate3: "27. juni",
-    overnightDate4: "28. juni",
-    overnightDate5: "29. juni",
-    notesLabel: "Noter eller allergier",
-    notesPlaceholder: "Madønsker, børn eller andet.",
-    submit: "Send svar",
-    statusSuccess: "Tak! Vi har modtaget dit svar.",
-    statusError: "Noget gik galt. Prøv igen.",
-    requiredField: "Udfyld venligst de obligatoriske felter."
-  },
-  ro: {
-    navHome: "Acasă",
-    navCeremony: "Cununie",
-    navReception: "Petrecere",
-    navInfo: "Info",
-    navRsvp: "Confirmare",
-    rsvpTitle: "Confirmare",
-    rsvpIntro: "Vă rugăm să răspundeți până la 1 mai 2026.",
-    codeLabel: "Cod RSVP",
-    codeButton: "Deblochează",
-    invalidCode: "Cod invalid.",
-    nameLabel: "Numele tău",
-    emailLabel: "Email (opțional)",
-    attendingLabel: "Vei participa?",
-    yes: "Da",
-    no: "Nu",
-    plusOneLabel: "Vii cu +1?",
-    plusOneNameLabel: "Numele +1",
-    plusOneNamePlaceholder: "Numele invitatului",
-    secondNameLabel: "Numele partenerului",
-    secondNamePlaceholder: "Numele partenerului",
-    overnightLabel: "Cazare la locație?",
-    overnightYes: "Da",
-    overnightNo: "Nu",
-    overnightDatesLabel: "Ce nopți?",
-    overnightDate1: "25 iunie",
-    overnightDate2: "26 iunie",
-    overnightDate3: "27 iunie",
-    overnightDate4: "28 iunie",
-    overnightDate5: "29 iunie",
-    notesLabel: "Observații sau alergii",
-    notesPlaceholder: "Preferințe alimentare, copii sau altceva.",
-    submit: "Trimite",
-    statusSuccess: "Mulțumim! Am primit răspunsul tău.",
-    statusError: "Ceva nu a mers bine. Te rugăm să încerci din nou.",
-    requiredField: "Te rugăm să completezi câmpurile obligatorii."
-  },
-  bg: {
-    navHome: "Начало",
-    navCeremony: "Венчавка",
-    navReception: "Тържество",
-    navInfo: "Инфо",
-    navRsvp: "Потвърждение",
-    rsvpTitle: "Потвърждение",
-    rsvpIntro: "Моля, отговорете до 1 май 2026 г.",
-    codeLabel: "Код за RSVP",
-    codeButton: "Отключи",
-    invalidCode: "Невалиден код.",
-    nameLabel: "Вашето име",
-    emailLabel: "Имейл (по желание)",
-    attendingLabel: "Ще присъствате ли?",
-    yes: "Да",
-    no: "Не",
-    plusOneLabel: "Ще доведете ли +1?",
-    plusOneNameLabel: "Име на +1",
-    plusOneNamePlaceholder: "Име на госта",
-    secondNameLabel: "Име на партньора",
-    secondNamePlaceholder: "Име на партньора",
-    overnightLabel: "Нощувка на място?",
-    overnightYes: "Да",
-    overnightNo: "Не",
-    overnightDatesLabel: "Кои нощи?",
-    overnightDate1: "25 юни",
-    overnightDate2: "26 юни",
-    overnightDate3: "27 юни",
-    overnightDate4: "28 юни",
-    overnightDate5: "29 юни",
-    notesLabel: "Бележки или алергии",
-    notesPlaceholder: "Храна, деца или нещо друго.",
-    submit: "Изпрати",
-    statusSuccess: "Благодарим! Получихме вашия отговор.",
-    statusError: "Нещо се обърка. Опитайте отново.",
-    requiredField: "Моля, попълнете задължителните полета."
-  }
-};
+const translationCache = {};
+let currentRsvpStrings = null;
+let currentLang = "en";
 
 const form = document.getElementById("rsvpForm");
 const formStatus = document.getElementById("formStatus");
@@ -173,8 +26,29 @@ const secondNameInput = document.getElementById("secondName");
 let activeCode = null;
 let activeRule = null;
 
-function setLanguage(lang) {
-  const t = translations[lang];
+const fallbackRsvpStrings = {
+  plusOneLabel: "Will you bring a +1?",
+  plusOneNameLabel: "Plus one name",
+  plusOneNamePlaceholder: "Guest name",
+  yes: "Yes",
+  no: "No"
+};
+
+async function loadTranslations(lang) {
+  if (translationCache[lang]) return translationCache[lang];
+
+  try {
+    const response = await fetch(`i18n/${lang}.json`, { cache: "no-store" });
+    if (!response.ok) throw new Error("load failed");
+    const data = await response.json();
+    translationCache[lang] = data;
+    return data;
+  } catch (error) {
+    return null;
+  }
+}
+
+function setLanguage(lang, t) {
   if (!t) return;
 
   document.documentElement.lang = lang;
@@ -190,15 +64,8 @@ function setLanguage(lang) {
   document.getElementById("attendingLabel").textContent = t.attendingLabel;
   document.getElementById("yesOption").textContent = t.yes;
   document.getElementById("noOption").textContent = t.no;
-  if (plusOneRow) {
-    plusOneRow.querySelector("#plusOneLabel").textContent = t.plusOneLabel;
-    plusOneRow.querySelector("#plusOneYes").textContent = t.yes;
-    plusOneRow.querySelector("#plusOneNo").textContent = t.no;
-  }
-  if (plusOneNameRow && plusOneNameInput) {
-    plusOneNameRow.querySelector("#plusOneNameLabel").textContent = t.plusOneNameLabel;
-    plusOneNameInput.setAttribute("placeholder", t.plusOneNamePlaceholder);
-  }
+  document.getElementById("secondNameLabel").textContent = t.secondNameLabel;
+  document.getElementById("secondName").setAttribute("placeholder", t.secondNamePlaceholder);
   document.getElementById("overnightLabel").textContent = t.overnightLabel;
   document.getElementById("overnightYes").textContent = t.overnightYes;
   document.getElementById("overnightNo").textContent = t.overnightNo;
@@ -212,8 +79,16 @@ function setLanguage(lang) {
   document.getElementById("notes").setAttribute("placeholder", t.notesPlaceholder);
   document.getElementById("submitBtn").textContent = t.submit;
 
-  document.getElementById("secondNameLabel").textContent = t.secondNameLabel;
-  document.getElementById("secondName").setAttribute("placeholder", t.secondNamePlaceholder);
+  if (plusOneRow) {
+    plusOneRow.querySelector("#plusOneLabel").textContent = t.plusOneLabel;
+    plusOneRow.querySelector("#plusOneYes").textContent = t.yes;
+    plusOneRow.querySelector("#plusOneNo").textContent = t.no;
+  }
+
+  if (plusOneNameRow && plusOneNameInput) {
+    plusOneNameRow.querySelector("#plusOneNameLabel").textContent = t.plusOneNameLabel;
+    plusOneNameInput.setAttribute("placeholder", t.plusOneNamePlaceholder);
+  }
 
   if (codeStatus.dataset.state === "error") {
     codeStatus.textContent = t.invalidCode;
@@ -228,11 +103,13 @@ function setLanguage(lang) {
   });
 }
 
-function applyCodeRules(rule) {
-  activeRule = rule;
-  renderPlusOneSection(rule.allowPlusOne);
-  updateSecondNameVisibility();
-  updateOvernightVisibility();
+async function switchLanguage(lang) {
+  const data = (await loadTranslations(lang)) || (await loadTranslations("en"));
+  if (!data || !data.rsvp) return;
+
+  currentLang = translationCache[lang] ? lang : "en";
+  currentRsvpStrings = data.rsvp;
+  setLanguage(currentLang, currentRsvpStrings);
 }
 
 function updateAttendingState() {
@@ -249,6 +126,7 @@ function updateAttendingState() {
   if (plusOneNameInput) {
     plusOneNameInput.disabled = disableExtras;
   }
+
   if (form.elements["overnight"]) {
     form.elements["overnight"].forEach((input) => {
       input.disabled = disableExtras;
@@ -298,7 +176,7 @@ function updateOvernightVisibility() {
   });
 }
 
-function renderPlusOneSection(allowPlusOne) {
+function renderPlusOneSection(t, allowPlusOne) {
   plusOneMount.innerHTML = "";
   plusOneRow = null;
   plusOneNameRow = null;
@@ -308,20 +186,19 @@ function renderPlusOneSection(allowPlusOne) {
     return;
   }
 
-  const t = translations[document.documentElement.lang] || translations.en;
-
+  const strings = t || fallbackRsvpStrings;
   const plusOneWrapper = document.createElement("div");
   plusOneWrapper.className = "form-row full";
   plusOneWrapper.innerHTML = `
-    <span class="label" id="plusOneLabel">${t.plusOneLabel}</span>
+    <span class="label" id="plusOneLabel">${strings.plusOneLabel}</span>
     <div class="radio-group">
       <label class="radio">
         <input type="radio" name="plus_one" value="yes">
-        <span id="plusOneYes">${t.yes}</span>
+        <span id="plusOneYes">${strings.yes}</span>
       </label>
       <label class="radio">
         <input type="radio" name="plus_one" value="no">
-        <span id="plusOneNo">${t.no}</span>
+        <span id="plusOneNo">${strings.no}</span>
       </label>
     </div>
   `;
@@ -330,8 +207,8 @@ function renderPlusOneSection(allowPlusOne) {
   plusOneNameWrapper.className = "form-row full";
   plusOneNameWrapper.hidden = true;
   plusOneNameWrapper.innerHTML = `
-    <label for="plusOneName" id="plusOneNameLabel">${t.plusOneNameLabel}</label>
-    <input id="plusOneName" name="plus_one_name" type="text" placeholder="${t.plusOneNamePlaceholder}">
+    <label for="plusOneName" id="plusOneNameLabel">${strings.plusOneNameLabel}</label>
+    <input id="plusOneName" name="plus_one_name" type="text" placeholder="${strings.plusOneNamePlaceholder}">
   `;
 
   plusOneMount.appendChild(plusOneWrapper);
@@ -342,10 +219,16 @@ function renderPlusOneSection(allowPlusOne) {
   plusOneNameInput = plusOneNameWrapper.querySelector("#plusOneName");
 }
 
+function applyCodeRules(rule) {
+  activeRule = rule;
+  renderPlusOneSection(currentRsvpStrings, rule.allowPlusOne);
+  updateSecondNameVisibility();
+  updateOvernightVisibility();
+}
+
 function unlockWithCode(rawCode) {
   const code = rawCode.trim().toUpperCase();
-  const activeLang = document.documentElement.lang || "en";
-  const t = translations[activeLang] || translations.en;
+  const t = currentRsvpStrings || { invalidCode: "Invalid code." };
   const rule = codeRules[code];
 
   if (!rule) {
@@ -367,10 +250,6 @@ function unlockWithCode(rawCode) {
   updateAttendingState();
 }
 
-langButtons.forEach((btn) => {
-  btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
-});
-
 form.addEventListener("change", (event) => {
   if (event.target.name === "attending") {
     updateAttendingState();
@@ -385,33 +264,39 @@ form.addEventListener("change", (event) => {
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const activeLang = document.documentElement.lang || "en";
-  const t = translations[activeLang] || translations.en;
+  const t = currentRsvpStrings || { requiredField: "Please fill in the required fields." };
 
   if (!activeCode || !activeRule) {
     formStatus.dataset.state = "error";
     formStatus.textContent = t.requiredField;
+    formStatus.hidden = false;
     return;
   }
 
   const attending = form.elements["attending"].value;
   const plusOneValue = form.elements["plus_one"]?.value || "";
 
-  const formData = new FormData(form);
+  const formData = new FormData();
   formData.append("code", activeCode);
-  formData.append("household", activeRule.household);
-  formData.append("language", activeLang);
+  formData.append("guest_1_name", form.elements["name"].value.trim());
+  formData.append("guest_2_name", form.elements["second_name"]?.value.trim() || "");
+  formData.append("email", form.elements["email"]?.value.trim() || "");
   formData.append("attending", attending);
+  formData.append("plus_one", plusOneValue || "");
+  formData.append("plus_one_name", form.elements["plus_one_name"]?.value.trim() || "");
+  formData.append("note", form.elements["notes"]?.value.trim() || "");
 
-  if (!formData.get("name") || !formData.get("attending")) {
+  if (!formData.get("guest_1_name") || !formData.get("attending")) {
     formStatus.dataset.state = "error";
     formStatus.textContent = t.requiredField;
+    formStatus.hidden = false;
     return;
   }
 
   if (activeRule.allowPlusOne && plusOneValue === "yes" && !formData.get("plus_one_name")) {
     formStatus.dataset.state = "error";
     formStatus.textContent = t.requiredField;
+    formStatus.hidden = false;
     return;
   }
 
@@ -423,14 +308,16 @@ form.addEventListener("submit", async (event) => {
   if (attending === "yes" && overnightValue === "yes" && overnightDates.length === 0) {
     formStatus.dataset.state = "error";
     formStatus.textContent = t.requiredField;
+    formStatus.hidden = false;
     return;
   }
 
   formData.append("overnight", overnightValue);
-  formData.append("overnight_dates", overnightDates.join(", "));
+  formData.append("dates", overnightDates.join(", "));
 
   formStatus.textContent = "";
   formStatus.dataset.state = "";
+  formStatus.hidden = false;
 
   try {
     const response = await fetch(FORM_ENDPOINT, {
@@ -447,24 +334,36 @@ form.addEventListener("submit", async (event) => {
     updateAttendingState();
     formStatus.dataset.state = "success";
     formStatus.textContent = t.statusSuccess;
+    formStatus.hidden = false;
   } catch (error) {
     formStatus.dataset.state = "error";
     formStatus.textContent = t.statusError;
+    formStatus.hidden = false;
   }
 });
 
-const browserLang = navigator.language.slice(0, 2);
-const params = new URLSearchParams(window.location.search);
-const paramLang = params.get("lang");
-const initialLang = translations[paramLang] ? paramLang : (translations[browserLang] ? browserLang : "en");
-setLanguage(initialLang);
+async function init() {
+  const params = new URLSearchParams(window.location.search);
+  const paramLang = params.get("lang");
+  const browserLang = navigator.language.slice(0, 2);
+  const initialLang = ["en", "da", "ro", "bg"].includes(paramLang)
+    ? paramLang
+    : (["en", "da", "ro", "bg"].includes(browserLang) ? browserLang : "en");
 
-const paramCode = params.get("code");
-if (paramCode) {
-  unlockWithCode(paramCode);
-} else {
-  codeStatus.dataset.state = "error";
-  codeStatus.textContent = translations[initialLang].invalidCode;
-  form.hidden = true;
+  await switchLanguage(initialLang);
+
+  langButtons.forEach((btn) => {
+    btn.addEventListener("click", () => switchLanguage(btn.dataset.lang));
+  });
+
+  const paramCode = params.get("code");
+  if (paramCode) {
+    unlockWithCode(paramCode);
+  } else {
+    codeStatus.dataset.state = "error";
+    codeStatus.textContent = currentRsvpStrings?.invalidCode || "Invalid code.";
+    form.hidden = true;
+  }
 }
 
+init();
