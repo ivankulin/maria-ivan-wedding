@@ -338,6 +338,7 @@ body {
   display: grid;
   gap: 16px;
   background: #ffffff;
+  overflow: hidden;
 }
 
 .info-card .image-placeholder,
@@ -349,6 +350,7 @@ body {
   width: 100%;
   object-fit: cover;
   display: block;
+  max-width: 100%;
 }
 
 .info-content {
