@@ -258,6 +258,24 @@ body {
   margin-bottom: 28px;
 }
 
+.hero-panel {
+  border: 1px solid var(--panel-border);
+  background: #ffffff;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.hero-panel .hero-image {
+  margin-bottom: 0;
+  border: 1px solid var(--panel-border);
+}
+
+.hero-panel .countdown {
+  border-top: 1px solid var(--panel-border);
+  padding-top: 12px;
+}
+
 .countdown {
   display: flex;
   gap: 16px;
