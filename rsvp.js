@@ -20,7 +20,7 @@ function buildCodeRules(list) {
     if (!cleanNames.length) return;
     const code = cleanNames.map(toCode).join("-");
     rules[code] = {
-      household: cleanNames.join(" & ")
+      household: cleanNames.join(" & "),
       allowPlusOne: cleanNames.length === 1,
       isCouple: cleanNames.length === 2
     };
