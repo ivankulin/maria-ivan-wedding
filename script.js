@@ -55,6 +55,10 @@ function setLanguage(lang, t) {
   document.getElementById("receptionTitle").textContent = t.receptionTitle;
   document.getElementById("receptionLead").textContent = t.receptionLead;
   document.getElementById("receptionText").textContent = t.receptionText;
+  const menuLink = document.getElementById("menuLink");
+  if (menuLink) menuLink.textContent = t.menuLink;
+  const drinksLink = document.getElementById("drinksLink");
+  if (drinksLink) drinksLink.textContent = t.drinksLink;
   document.getElementById("receptionAddressLabel").textContent = t.receptionAddressLabel;
   document.getElementById("receptionAddress").textContent = t.receptionAddress;
   document.getElementById("infoTitle").textContent = t.infoTitle;

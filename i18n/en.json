@@ -17,8 +17,10 @@
     "ceremonyAddressLabel": "Address:",
     "ceremonyAddress": "Ronæsbrovej 5, 5580 Nørre Aaby",
     "receptionTitle": "Dinner and celebration",
-    "receptionLead": "Dinner and celebration in Risskov",
-    "receptionText": "Around 16:00 the couple arrives at the venue for dinner and party. The venue is about one kilometer from the church.",
+    "receptionLead": "18:00 - Dinner, drinks, and celebration",
+    "receptionText": "We sit down at 18:00 for a three-course dinner with wine. After 10 years in Denmark, we have integrated enough to insist on punctuality and an early dinner—so latecomers may remain hungry. From 20:00 until 02:00 we will keep the dance floor going with DJ Alex. Our bar table will have assorted drinks available throughout the evening, and around 23:00 we will serve night food for anyone who needs a recharge to dance into the early hours.",
+    "menuLink": "Menu",
+    "drinksLink": "Drinks card",
     "receptionAddressLabel": "Address:",
     "receptionAddress": "Vejen 87, 8240 Risskov",
     "infoTitle": "Good to know",
@@ -39,6 +41,16 @@
     "countHours": "hours",
     "countMinutes": "minutes",
     "countSeconds": "seconds"
+  },
+  "menu": {
+    "title": "Menu",
+    "subtitle": "A three-course celebration",
+    "body": "Menu details will be shared soon."
+  },
+  "drinks": {
+    "title": "Drinks card",
+    "subtitle": "Assorted drinks at the bar",
+    "body": "Drinks card details will be shared soon."
   },
   "rsvp": {
     "navHome": "Home",

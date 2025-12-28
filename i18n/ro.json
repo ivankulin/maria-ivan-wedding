@@ -1,4 +1,4 @@
-﻿{
+{
   "index": {
     "title": "Maria & Ivan",
     "date": "27 iunie 2026 la 15:00",
@@ -38,7 +38,9 @@
     "countDays": "zile",
     "countHours": "ore",
     "countMinutes": "minute",
-    "countSeconds": "secunde"
+    "countSeconds": "secunde",
+    "menuLink": "TODO: translate menu link",
+    "drinksLink": "TODO: translate drinks link"
   },
   "rsvp": {
     "navHome": "Acasă",
@@ -76,5 +78,15 @@
     "statusSuccess": "Mulțumim! Am primit răspunsul tău.",
     "statusError": "Ceva nu a mers bine. Te rugăm să încerci din nou.",
     "requiredField": "Te rugăm să completezi câmpurile obligatorii."
+  },
+  "menu": {
+    "title": "TODO: translate menu title",
+    "subtitle": "TODO: translate menu subtitle",
+    "body": "TODO: translate menu body"
+  },
+  "drinks": {
+    "title": "TODO: translate drinks title",
+    "subtitle": "TODO: translate drinks subtitle",
+    "body": "TODO: translate drinks body"
   }
 }

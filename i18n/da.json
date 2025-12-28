@@ -1,4 +1,4 @@
-﻿{
+{
   "index": {
     "title": "Maria & Ivan",
     "date": "27. juni 2026 kl. 15:00",
@@ -38,7 +38,9 @@
     "countDays": "dage",
     "countHours": "timer",
     "countMinutes": "minutter",
-    "countSeconds": "sekunder"
+    "countSeconds": "sekunder",
+    "menuLink": "TODO: translate menu link",
+    "drinksLink": "TODO: translate drinks link"
   },
   "rsvp": {
     "navHome": "Start",
@@ -76,5 +78,15 @@
     "statusSuccess": "Tak! Vi har modtaget dit svar.",
     "statusError": "Noget gik galt. Prøv igen.",
     "requiredField": "Udfyld venligst de obligatoriske felter."
+  },
+  "menu": {
+    "title": "TODO: translate menu title",
+    "subtitle": "TODO: translate menu subtitle",
+    "body": "TODO: translate menu body"
+  },
+  "drinks": {
+    "title": "TODO: translate drinks title",
+    "subtitle": "TODO: translate drinks subtitle",
+    "body": "TODO: translate drinks body"
   }
 }

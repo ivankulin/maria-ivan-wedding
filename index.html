@@ -16,7 +16,7 @@
         <div class="brand">Maria & Ivan</div>
       </div>
       <div class="header-row header-row--languages">
-        <div class="lang-switcher" role="group" aria-label="Language switcher">
+        <div class="lang-switcher panel" role="group" aria-label="Language switcher">
           <button type="button" data-lang="en" aria-pressed="true">
             <span class="flag flag-en" aria-hidden="true"></span>
             <span class="lang-label">EN</span>
@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="header-row header-row--nav">
-        <nav class="main-nav">
+        <nav class="main-nav panel">
           <a href="#home" id="navHome">Home</a>
           <a href="#ceremony" id="navCeremony">Ceremony</a>
           <a href="#reception" id="navReception">Reception</a>
@@ -85,27 +85,27 @@
       </section>
 
       <section class="event-section" id="ceremony">
-        <h2 id="ceremonyTitle">Ceremony</h2>
-        <div class="event-media">
-          <img class="event-image" src="ceremony.jpg" alt="Ceremony location">
-          <div class="map-embed" aria-label="Map to the ceremony location">
-            <iframe
-              title="Ronæsbrovej 5, 5580 Nørre Aaby"
-              src="https://www.google.com/maps?q=Ron%C3%A6sbrovej%205%2C%205580%20N%C3%B8rre%20Aaby&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-        <article class="event-card">
-          <div class="event-content">
-            <h3 id="ceremonyLead">15:00 - Ceremony at Sophienlyst Slot</h3>
-            <p id="ceremonyText">Our ceremony begins at the church. Follow the signs to the center and the church.</p>
-            <p class="event-address"><span id="ceremonyAddressLabel">Address:</span> <span id="ceremonyAddress">Ronæsbrovej 5, 5580 Nørre Aaby</span></p>
-          </div>
-        </article>
-      </section>
+  <h2 id="ceremonyTitle">Ceremony</h2>
+  <article class="event-card">
+    <div class="event-media">
+      <img class="event-image" src="ceremony.jpg" alt="Ceremony location">
+      <div class="map-embed" aria-label="Map to the ceremony location">
+        <iframe
+          title="Ron?sbrovej 5, 5580 Norre Aaby"
+          src="https://www.google.com/maps?q=Ron%C3%A6sbrovej%205%2C%205580%20N%C3%B8rre%20Aaby&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <div class="event-content">
+      <h3 id="ceremonyLead">15:00 - Ceremony at Sophienlyst Slot</h3>
+      <p id="ceremonyText">Our ceremony begins at the church. Follow the signs to the center and the church.</p>
+      <p class="event-address"><span id="ceremonyAddressLabel">Address:</span> <span id="ceremonyAddress">Ron?sbrovej 5, 5580 Norre Aaby</span></p>
+    </div>
+  </article>
+</section>
 
       <section class="event-section" id="reception">
         <h2 id="receptionTitle">Dinner and celebration</h2>
@@ -114,7 +114,10 @@
           <div class="event-content">
             <h3 id="receptionLead">Dinner and celebration in Risskov</h3>
             <p id="receptionText">Around 16:00 the couple arrives at the venue for dinner and party. The venue is about one kilometer from the church.</p>
-            <p class="event-address"><span id="receptionAddressLabel">Address:</span> <span id="receptionAddress">Vejen 87, 8240 Risskov</span></p>
+            <div class="reception-links">
+              <a class="pill-link" href="menu.html" id="menuLink">Menu</a>
+              <a class="pill-link" href="drinks.html" id="drinksLink">Drinks card</a>
+            </div>
           </div>
         </article>
       </section>

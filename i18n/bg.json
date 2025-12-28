@@ -1,4 +1,4 @@
-﻿{
+{
   "index": {
     "title": "Maria & Ivan",
     "date": "27 юни 2026 г. в 15:00",
@@ -38,7 +38,9 @@
     "countDays": "дни",
     "countHours": "часа",
     "countMinutes": "минути",
-    "countSeconds": "секунди"
+    "countSeconds": "секунди",
+    "menuLink": "TODO: translate menu link",
+    "drinksLink": "TODO: translate drinks link"
   },
   "rsvp": {
     "navHome": "Начало",
@@ -76,5 +78,15 @@
     "statusSuccess": "Благодарим! Получихме вашия отговор.",
     "statusError": "Нещо се обърка. Опитайте отново.",
     "requiredField": "Моля, попълнете задължителните полета."
+  },
+  "menu": {
+    "title": "TODO: translate menu title",
+    "subtitle": "TODO: translate menu subtitle",
+    "body": "TODO: translate menu body"
+  },
+  "drinks": {
+    "title": "TODO: translate drinks title",
+    "subtitle": "TODO: translate drinks subtitle",
+    "body": "TODO: translate drinks body"
   }
 }
