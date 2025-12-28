@@ -31,22 +31,27 @@ body {
 .site-header {
   max-width: 980px;
   margin: 0 auto 36px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--soft-line);
 }
 
 .header-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--soft-line);
+}
+
+.header-row--title {
+  padding-bottom: 10px;
 }
 
 .header-row--languages {
-  justify-content: center;
-  border-bottom: none;
-  padding-top: 14px;
-  padding-bottom: 0;
+  padding-bottom: 10px;
 }
 
 .brand {
@@ -58,29 +63,50 @@ body {
 
 .main-nav {
   display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
+  gap: 0;
+  flex-wrap: nowrap;
   justify-content: center;
   font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
+  border: 1px solid var(--line);
+  padding: 6px 8px;
+  background: #ffffff;
+  box-shadow: none;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .main-nav a {
   color: var(--ink);
   text-decoration: none;
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+
+.main-nav a + a {
+  border-left: 1px solid var(--line);
 }
 
 .lang-switcher {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
+  border: 1px solid var(--line);
+  padding: 6px 8px;
+  background: #ffffff;
+  width: auto;
+  overflow-x: visible;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .lang-switcher button {
   border: 1px solid var(--line);
-  background: var(--panel);
+  background: transparent;
   color: var(--ink);
   padding: 6px 10px;
   display: inline-flex;
@@ -89,6 +115,7 @@ body {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   cursor: pointer;
+  box-shadow: none;
 }
 
 .lang-switcher button[aria-pressed="true"] {
@@ -131,6 +158,29 @@ body {
   display: flex;
   flex-direction: column;
   gap: 56px;
+}
+
+.content > section {
+  position: relative;
+  padding-top: 64px;
+}
+
+.content > section::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--ink);
+}
+
+.content > section:first-child {
+  padding-top: 0;
+}
+
+.content > section:first-child::before {
+  content: none;
 }
 
 .section-label {
@@ -200,12 +250,14 @@ body {
 }
 
 .countdown {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .count-item {
+  flex: 1 1 0;
   padding: 12px 8px;
   border-top: 1px solid var(--soft-line);
 }
@@ -213,13 +265,13 @@ body {
 .count-number {
   display: block;
   font-family: var(--display);
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 4.2vw, 2rem);
   letter-spacing: 0.08em;
 }
 
 .count-label {
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: clamp(0.55rem, 1.6vw, 0.7rem);
   letter-spacing: 0.3em;
   color: var(--muted);
 }
@@ -272,6 +324,8 @@ body {
   padding: 24px;
   display: grid;
   gap: 20px;
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
 }
 
 .event-content h3 {
@@ -339,6 +393,7 @@ body {
   gap: 16px;
   background: #ffffff;
   overflow: hidden;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
 }
 
 .info-card .image-placeholder,
@@ -375,6 +430,8 @@ body {
   text-align: center;
   display: grid;
   gap: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
 }
 
 .rsvp-cta p {
@@ -406,6 +463,8 @@ body {
 .rsvp {
   border: 1px solid var(--soft-line);
   padding: 32px;
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
 }
 
 .rsvp-panel {
@@ -516,10 +575,16 @@ button {
   letter-spacing: 0.2em;
   font-weight: 500;
   padding: 14px 24px;
-  border: 1px solid var(--ink);
-  background: var(--ink);
-  color: #ffffff;
+  border: 2px solid var(--ink);
+  background: #ffffff;
+  color: var(--ink);
   cursor: pointer;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.cta-button {
+  border-width: 2px;
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 .form-status {
@@ -554,10 +619,6 @@ button {
 }
 
 @media (max-width: 900px) {
-  .header-row {
-    flex-direction: column;
-  }
-
   .event-media {
     grid-template-columns: 1fr;
   }
@@ -569,7 +630,8 @@ button {
   }
 
   .main-nav {
-    gap: 10px;
+    justify-content: flex-start;
+    padding: 6px 10px;
   }
 
   .info-grid {
@@ -589,5 +651,9 @@ button {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+
+  .lang-switcher {
+    justify-content: center;
   }
 }
