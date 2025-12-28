@@ -1,9 +1,30 @@
-﻿const codeRules = {
-  "ANGEL-EVELIN": { household: "Angel & Evelin", maxAdults: 2, maxChildren: 1, allowPlusOne: false },
-  "YOSIF": { household: "Yosif", maxAdults: 2, maxChildren: 0, allowPlusOne: true },
-  "SLAVI": { household: "Slavi", maxAdults: 2, maxChildren: 0, allowPlusOne: true },
-  "STOYAN": { household: "Stoyan", maxAdults: 2, maxChildren: 0, allowPlusOne: true }
-};
+const invites = [
+  ["Angel", "Evelin"],
+  ["Yosif"],
+  ["Slavi"],
+  ["Stoyan"]
+];
+
+function toCode(name) {
+  return name.trim().toUpperCase().replace(/[^A-Z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
+function buildCodeRules(list) {
+  const rules = {};
+  list.forEach((names) => {
+    const cleanNames = names.map((name) => name.trim()).filter(Boolean);
+    if (!cleanNames.length) return;
+    const code = cleanNames.map(toCode).join("-");
+    rules[code] = {
+      household: cleanNames.join(" & ")
+      allowPlusOne: cleanNames.length === 1,
+      isCouple: cleanNames.length === 2
+    };
+  });
+  return rules;
+}
+
+const codeRules = buildCodeRules(invites);
 
 const translationCache = {};
 let currentIndexStrings = null;
@@ -17,6 +38,13 @@ const countDaysEl = document.getElementById("countNumberDays");
 const countHoursEl = document.getElementById("countNumberHours");
 const countMinutesEl = document.getElementById("countNumberMinutes");
 const countSecondsEl = document.getElementById("countNumberSeconds");
+
+function setText(id, value) {
+  const el = document.getElementById(id);
+  if (el && value !== undefined && value !== null) {
+    el.textContent = value;
+  }
+}
 
 async function loadTranslations(lang) {
   if (translationCache[lang]) return translationCache[lang];
@@ -36,52 +64,52 @@ function setLanguage(lang, t) {
   if (!t) return;
 
   document.documentElement.lang = lang;
-  document.getElementById("title").textContent = t.title;
-  document.getElementById("date").textContent = t.date;
-  document.getElementById("navHome").textContent = t.navHome;
-  document.getElementById("navCeremony").textContent = t.navCeremony;
-  document.getElementById("navReception").textContent = t.navReception;
-  document.getElementById("navInfo").textContent = t.navInfo;
-  document.getElementById("navRsvp").textContent = t.navRsvp;
-  document.getElementById("welcomeTitle").textContent = t.welcomeTitle;
-  document.getElementById("welcomeText").textContent = t.welcomeText;
-  document.getElementById("detailsTitle").textContent = t.detailsTitle;
-  document.getElementById("detailsText").textContent = t.detailsText;
-  document.getElementById("ceremonyTitle").textContent = t.ceremonyTitle;
-  document.getElementById("ceremonyLead").textContent = t.ceremonyLead;
-  document.getElementById("ceremonyText").textContent = t.ceremonyText;
-  document.getElementById("ceremonyAddressLabel").textContent = t.ceremonyAddressLabel;
-  document.getElementById("ceremonyAddress").textContent = t.ceremonyAddress;
-  document.getElementById("receptionTitle").textContent = t.receptionTitle;
-  document.getElementById("receptionLead").textContent = t.receptionLead;
-  document.getElementById("receptionText").textContent = t.receptionText;
+  setText("title", t.title);
+  setText("date", t.date);
+  setText("navHome", t.navHome);
+  setText("navCeremony", t.navCeremony);
+  setText("navReception", t.navReception);
+  setText("navInfo", t.navInfo);
+  setText("navRsvp", t.navRsvp);
+  setText("welcomeTitle", t.welcomeTitle);
+  setText("welcomeText", t.welcomeText);
+  setText("detailsTitle", t.detailsTitle);
+  setText("detailsText", t.detailsText);
+  setText("ceremonyTitle", t.ceremonyTitle);
+  setText("ceremonyLead", t.ceremonyLead);
+  setText("ceremonyText", t.ceremonyText);
+  setText("ceremonyAddressLabel", t.ceremonyAddressLabel);
+  setText("ceremonyAddress", t.ceremonyAddress);
+  setText("receptionTitle", t.receptionTitle);
+  setText("receptionLead", t.receptionLead);
+  setText("receptionText", t.receptionText);
   const menuLink = document.getElementById("menuLink");
   if (menuLink) menuLink.textContent = t.menuLink;
   const drinksLink = document.getElementById("drinksLink");
   if (drinksLink) drinksLink.textContent = t.drinksLink;
-  document.getElementById("receptionAddressLabel").textContent = t.receptionAddressLabel;
-  document.getElementById("receptionAddress").textContent = t.receptionAddress;
-  document.getElementById("infoTitle").textContent = t.infoTitle;
+  setText("receptionAddressLabel", t.receptionAddressLabel);
+  setText("receptionAddress", t.receptionAddress);
+  setText("infoTitle", t.infoTitle);
   const infoOneTitle = document.getElementById("infoOneTitle");
   const infoOneText = document.getElementById("infoOneText");
   if (infoOneTitle) infoOneTitle.textContent = t.infoOneTitle;
   if (infoOneText) infoOneText.textContent = t.infoOneText;
-  document.getElementById("infoTwoTitle").textContent = t.infoTwoTitle;
-  document.getElementById("infoTwoText").textContent = t.infoTwoText;
-  document.getElementById("infoThreeTitle").textContent = t.infoThreeTitle;
-  document.getElementById("infoThreeText").textContent = t.infoThreeText;
+  setText("infoTwoTitle", t.infoTwoTitle);
+  setText("infoTwoText", t.infoTwoText);
+  setText("infoThreeTitle", t.infoThreeTitle);
+  setText("infoThreeText", t.infoThreeText);
   const infoFourTitle = document.getElementById("infoFourTitle");
   const infoFourText = document.getElementById("infoFourText");
   if (infoFourTitle) infoFourTitle.textContent = t.infoFourTitle;
   if (infoFourText) infoFourText.textContent = t.infoFourText;
-  document.getElementById("rsvpCtaTitle").textContent = t.rsvpCtaTitle;
-  document.getElementById("rsvpCtaText").textContent = t.rsvpCtaText;
-  document.getElementById("codeLabel").textContent = t.codeLabel;
-  document.getElementById("codeBtn").textContent = t.codeButton;
-  document.getElementById("countDays").textContent = t.countDays;
-  document.getElementById("countHours").textContent = t.countHours;
-  document.getElementById("countMinutes").textContent = t.countMinutes;
-  document.getElementById("countSeconds").textContent = t.countSeconds;
+  setText("rsvpCtaTitle", t.rsvpCtaTitle);
+  setText("rsvpCtaText", t.rsvpCtaText);
+  setText("codeLabel", t.codeLabel);
+  setText("codeBtn", t.codeButton);
+  setText("countDays", t.countDays);
+  setText("countHours", t.countHours);
+  setText("countMinutes", t.countMinutes);
+  setText("countSeconds", t.countSeconds);
 
   if (codeStatus.dataset.state === "error") {
     codeStatus.textContent = t.invalidCode;
