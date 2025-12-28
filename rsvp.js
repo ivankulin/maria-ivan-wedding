@@ -1,11 +1,34 @@
-﻿const FORM_ENDPOINT = "https://formspree.io/f/xwvkpnzk";
+const FORM_ENDPOINT = "https://formspree.io/f/xwvkpnzk";
 
-const codeRules = {
-  "ANGEL-EVELIN": { household: "Angel & Evelin", maxAdults: 2, maxChildren: 1, allowPlusOne: false },
-  "YOSIF": { household: "Yosif", maxAdults: 2, maxChildren: 0, allowPlusOne: true },
-  "SLAVI": { household: "Slavi", maxAdults: 2, maxChildren: 0, allowPlusOne: true },
-  "STOYAN": { household: "Stoyan", maxAdults: 2, maxChildren: 0, allowPlusOne: true }
-};
+// Add invitees here: 1 name => plus one allowed, 2 names => no plus one.
+// Codes are auto-generated from the names (e.g., "Angel Evelin" => ANGEL-EVELIN).
+const invites = [
+  ["Angel", "Evelin"],
+  ["Yosif"],
+  ["Slavi"],
+  ["Stoyan"]
+];
+
+function toCode(name) {
+  return name.trim().toUpperCase().replace(/[^A-Z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
+function buildCodeRules(list) {
+  const rules = {};
+  list.forEach((names) => {
+    const cleanNames = names.map((name) => name.trim()).filter(Boolean);
+    if (!cleanNames.length) return;
+    const code = cleanNames.map(toCode).join("-");
+    rules[code] = {
+      household: cleanNames.join(" & ")
+      allowPlusOne: cleanNames.length === 1,
+      isCouple: cleanNames.length === 2
+    };
+  });
+  return rules;
+}
+
+const codeRules = buildCodeRules(invites);
 
 const translationCache = {};
 let currentRsvpStrings = null;
@@ -239,14 +262,11 @@ function unlockWithCode(rawCode) {
     return;
   }
 
-  const isCoupleCode = code.includes("-");
-  const resolvedRule = { ...rule, allowPlusOne: !isCoupleCode, isCouple: isCoupleCode };
-
   activeCode = code;
   codeStatus.dataset.state = "";
   codeStatus.textContent = "";
   form.hidden = false;
-  applyCodeRules(resolvedRule);
+  applyCodeRules(rule);
   updateAttendingState();
 }
 

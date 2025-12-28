@@ -1,3 +1,5 @@
+// Add invitees here: 1 name => plus one allowed, 2 names => no plus one.
+// Codes are auto-generated from the names (e.g., "Angel Evelin" => ANGEL-EVELIN).
 const invites = [
   ["Angel", "Evelin"],
   ["Yosif"],
