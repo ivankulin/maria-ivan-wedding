@@ -254,26 +254,41 @@ body {
 }
 
 .hero-image {
-  height: 320px;
+  height: auto;
   margin-bottom: 28px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-panel {
   border: 1px solid var(--panel-border);
   background: #ffffff;
-  padding: 24px;
-  display: grid;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
+  align-items: stretch;
 }
 
 .hero-panel .hero-image {
   margin-bottom: 0;
   border: 1px solid var(--panel-border);
+  width: 100%;
+  max-width: none;
+  display: block;
 }
 
 .hero-panel .countdown {
   border-top: 1px solid var(--panel-border);
   padding-top: 12px;
+  width: 100%;
+  max-width: none;
+}
+
+.hero-media {
+  width: 100%;
 }
 
 .countdown {
