@@ -269,7 +269,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  align-items: stretch;
+  align-items: center;
 }
 
 .hero-panel .hero-image {
@@ -283,12 +283,11 @@ body {
 .hero-panel .countdown {
   border-top: 1px solid var(--panel-border);
   padding-top: 12px;
-  width: 100%;
-  max-width: none;
+  width: min(720px, 100%);
 }
 
 .hero-media {
-  width: 100%;
+  width: min(720px, 100%);
 }
 
 .countdown {
