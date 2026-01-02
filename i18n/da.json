@@ -1,4 +1,4 @@
-{
+﻿{
   "index": {
     "title": "Maria & Ivan",
     "date": "27. juni 2026 kl. 15:00",
@@ -7,40 +7,50 @@
     "navReception": "Festen",
     "navInfo": "Godt at vide",
     "navRsvp": "Tilmelding",
-    "welcomeTitle": "Vi skal giftes!",
+    "welcomeTitle": "Vi skal giftes",
     "welcomeText": "Vi glæder os til at fejre dagen med jer.",
-    "detailsTitle": "Bryllupsfest",
-    "detailsText": "Flere detaljer og formel invitation følger snart.",
+    "detailsTitle": "Officiel invitation",
+    "detailsText": "Du er hjerteligt inviteret til at fejre vores kærlighed og begyndelsen på vores liv sammen. Dette er din officielle invitation - brug koden, du har modtaget sammen med den, til at RSVP nederst på siden.",
     "ceremonyTitle": "Vielse",
-    "ceremonyLead": "15:00 - Vielse i Odense C",
-    "ceremonyText": "Klokken tre begynder vores vielse i Vor Frue Kirke i Aarhus. Du finder lettest derhen ved at følge skiltene mod centrum og kirken.",
+    "ceremonyLead": "15:00 - Vielse ved Sophienlyst Slot",
+    "ceremonyText": "Vielsen finder sted ved kysten uden for Sophienlyst Slot kl. 15:00. Bagefter byder vi på mousserende vin og lette snacks. Bemærk, at starttidspunktet kan ændres, hvis vejret kræver det.",
     "ceremonyAddressLabel": "Adresse:",
     "ceremonyAddress": "Ronæsbrovej 5, 5580 Nørre Aaby",
     "receptionTitle": "Middag og fest",
-    "receptionLead": "Middag og fest i Risskov",
-    "receptionText": "Omkring kl. 16 ankommer brudeparret til forsamlingshuset i Risskov. Der serveres middag efterfulgt af fest. Fra kirken til festlokalet er der cirka én kilometer.",
+    "receptionLead": "18:00 - Middag, drikke og fest",
+    "receptionText": "Vi sætter os til bords kl. 18:00 til en tre-retters middag med vin. Efter 10 år i Danmark er vi blevet så integrerede, at vi insisterer på punktlighed og tidlig middag - så sent ankomne kan risikere at gå sultne. Fra 20:00 til 02:00 holder vi dansegulvet i gang med DJ Alex. Ved vores barbord vil der være et udvalg af drikke hele aftenen, og omkring kl. 23:00 serverer vi natmad til dem, der skal lade op til dans i de tidlige morgentimer.",
+    "menuLink": "Menu",
+    "drinksLink": "Drikkekort",
     "receptionAddressLabel": "Adresse:",
     "receptionAddress": "Vejen 87, 8240 Risskov",
     "infoTitle": "Godt at vide",
     "infoOneTitle": "Mad og drikke",
-    "infoOneText": "Forret, hovedret og traditionel bryllupskage. Vi byder på drikkevarer både under middagen og i baren bagefter.",
+    "infoOneText": "Forret, hovedret og bryllupskage. Drikkevarer serveres under middagen og i baren.",
     "infoTwoTitle": "Overnatning",
-    "infoTwoText": "Der er et begrænset antal senge på stedet, så giv venligst besked hurtigst muligt, hvis du ønsker at overnatte. Vi har lokationen fra 25.–29. juni. Hvis der ikke er plads til alle, kontakter vi jer og hjælper gerne med at finde et sted i nærheden.",
-    "infoThreeTitle": "Påklædning: Mørkt jakkesæt",
-    "infoThreeText": "For herrer betyder det et mørkt jakkesæt med skjorte og slips eller butterfly. For damer passer en elegant kjole bedst.",
+    "infoTwoText": "Der er et begrænset antal senge på stedet. Hvis du ønsker at overnatte, så RSVP hurtigst muligt, så vi kan reservere en plads til dig. Vi har stedet fra 25.-29. juni. Hvis efterspørgslen overstiger kapaciteten, kontakter vi jer og hjælper gerne med at finde overnatning i nærheden.",
+    "infoThreeTitle": "Påklædning: Nuancer af sort",
+    "infoThreeText": "Mørkt og elegant er temaet. Herrer: mørkt jakkesæt med skjorte og slips eller butterfly. Damer: en elegant kjole - helst i mørke toner. Gem de klare farver til en anden fest; dette look handler om tidløs aften-elegance.",
     "infoFourTitle": "Transport",
-    "infoFourText": "Hvis du har brug for hjælp til transport fra Odense til stedet, så kontakt os gerne, og vi vil gøre vores bedste for at hjælpe.",
+    "infoFourText": "Hvis du har brug for hjælp til transport fra Odense til stedet, så kontakt os, og vi vil gøre vores bedste for at hjælpe.",
     "rsvpCtaTitle": "Tilmelding",
-    "rsvpCtaText": "Brug din invitationskode for at åbne tilmeldingen.",
-    "codeLabel": "Tilmeldingskode",
+    "rsvpCtaText": "Brug din invitationskode for at åbne RSVP-formularen.",
+    "codeLabel": "RSVP-kode",
     "codeButton": "Lås op",
     "invalidCode": "Ugyldig kode.",
     "countDays": "dage",
     "countHours": "timer",
     "countMinutes": "minutter",
-    "countSeconds": "sekunder",
-    "menuLink": "TODO: translate menu link",
-    "drinksLink": "TODO: translate drinks link"
+    "countSeconds": "sekunder"
+  },
+  "menu": {
+    "title": "Menu",
+    "subtitle": "En tre-retters fejring",
+    "body": "Menuen kommer snart."
+  },
+  "drinks": {
+    "title": "Drikkekort",
+    "subtitle": "Udvalgte drikkevarer i baren",
+    "body": "Drikkekortet kommer snart."
   },
   "rsvp": {
     "navHome": "Start",
@@ -50,7 +60,7 @@
     "navRsvp": "Tilmelding",
     "rsvpTitle": "Tilmelding",
     "rsvpIntro": "Svar venligst senest 1. maj 2026.",
-    "codeLabel": "Tilmeldingskode",
+    "codeLabel": "RSVP-kode",
     "codeButton": "Lås op",
     "invalidCode": "Ugyldig kode.",
     "nameLabel": "Dit navn",
@@ -61,7 +71,7 @@
     "plusOneLabel": "Medbringer du en +1?",
     "plusOneNameLabel": "Navn på +1",
     "plusOneNamePlaceholder": "Gæstens navn",
-    "secondNameLabel": "Navn på partner",
+    "secondNameLabel": "Partners navn",
     "secondNamePlaceholder": "Partners navn",
     "overnightLabel": "Overnatning på stedet?",
     "overnightYes": "Ja",
@@ -78,15 +88,5 @@
     "statusSuccess": "Tak! Vi har modtaget dit svar.",
     "statusError": "Noget gik galt. Prøv igen.",
     "requiredField": "Udfyld venligst de obligatoriske felter."
-  },
-  "menu": {
-    "title": "TODO: translate menu title",
-    "subtitle": "TODO: translate menu subtitle",
-    "body": "TODO: translate menu body"
-  },
-  "drinks": {
-    "title": "TODO: translate drinks title",
-    "subtitle": "TODO: translate drinks subtitle",
-    "body": "TODO: translate drinks body"
   }
 }

@@ -1,4 +1,4 @@
-{
+﻿{
   "index": {
     "title": "Maria & Ivan",
     "date": "27 iunie 2026 la 15:00",
@@ -7,40 +7,50 @@
     "navReception": "Petrecere",
     "navInfo": "Info",
     "navRsvp": "Confirmare",
-    "welcomeTitle": "Ne căsătorim!",
-    "welcomeText": "Abia așteptăm să sărbătorim împreună cu voi.",
-    "detailsTitle": "Sărbătoare de nuntă",
-    "detailsText": "Mai multe detalii și invitația oficială urmează.",
+    "welcomeTitle": "Ne căsătorim",
+    "welcomeText": "Abia așteptăm să sărbătorim cu voi.",
+    "detailsTitle": "Invitație oficială",
+    "detailsText": "Sunteți invitați cu drag să sărbătoriți iubirea noastră și începutul vieții noastre împreună. Aceasta este invitația oficială - folosiți codul primit odată cu ea pentru a confirma la finalul paginii.",
     "ceremonyTitle": "Cununie",
-    "ceremonyLead": "15:00 - Cununie în Odense C",
-    "ceremonyText": "Cununia noastră începe la biserică. Urmează indicatoarele spre centru și biserică.",
-    "ceremonyAddressLabel": "Adresă:",
+    "ceremonyLead": "15:00 - Cununie la Sophienlyst Slot",
+    "ceremonyText": "Cununia va avea loc pe mal, în afara Sophienlyst Slot, la 15:00. După aceea, vom servi vin spumant și gustări ușoare. Vă rugăm să rețineți că ora de început poate fi ajustată dacă vremea o cere.",
+    "ceremonyAddressLabel": "Adresa:",
     "ceremonyAddress": "Ronæsbrovej 5, 5580 Nørre Aaby",
     "receptionTitle": "Cină și petrecere",
-    "receptionLead": "Cină și petrecere în Risskov",
-    "receptionText": "În jurul orei 16:00 ajungem la locație pentru cină și petrecere. Locația este la aproximativ un kilometru de biserică.",
-    "receptionAddressLabel": "Adresă:",
+    "receptionLead": "18:00 - Cină, băuturi și petrecere",
+    "receptionText": "Ne așezăm la masă la 18:00 pentru o cină în trei feluri cu vin. După 10 ani în Danemarca, ne-am integrat suficient cât să insistăm pe punctualitate și o cină devreme - așa că cei care întârzie pot rămâne flămânzi. Între 20:00 și 02:00 vom ține ringul de dans în mișcare cu DJ Alex. La barul nostru veți găsi băuturi variate pe tot parcursul serii, iar în jurul orei 23:00 vom servi mâncare de noapte pentru cei care au nevoie de energie pentru dans până dimineața.",
+    "menuLink": "Meniu",
+    "drinksLink": "Carta băuturilor",
+    "receptionAddressLabel": "Adresa:",
     "receptionAddress": "Vejen 87, 8240 Risskov",
     "infoTitle": "Bine de știut",
     "infoOneTitle": "Mâncare și băutură",
-    "infoOneText": "Felul întâi, felul principal și tortul de nuntă. Servim băuturi la cină și la bar.",
+    "infoOneText": "Aperitiv, fel principal și tort de nuntă. Băuturile sunt servite la cină și la bar.",
     "infoTwoTitle": "Cazare",
-    "infoTwoText": "Locurile de dormit la locație sunt limitate, așa că vă rugăm să confirmați cât mai curând dacă doriți să rămâneți peste noapte. Avem locația rezervată între 25–29 iunie. Dacă nu sunt suficiente locuri pentru toți, vă contactăm și vă ajutăm să găsiți cazare în apropiere.",
-    "infoThreeTitle": "Ținută: costum închis",
-    "infoThreeText": "Bărbați: costum închis cu cămașă și cravată sau papion. Femei: rochie elegantă.",
+    "infoTwoText": "Locurile de dormit la locație sunt limitate. Dacă doriți să rămâneți peste noapte, vă rugăm să confirmați cât mai curând pentru a vă putea rezerva un loc. Avem locația rezervată între 25-29 iunie. Dacă cererea depășește capacitatea, vă vom contacta și vă vom ajuta cu plăcere să găsiți cazare în apropiere.",
+    "infoThreeTitle": "Ținută: nuanțe de negru",
+    "infoThreeText": "Tema este închis și elegant. Bărbați: costum închis cu cămașă și cravată sau papion. Femei: o rochie elegantă - ideal în tonuri mai închise. Păstrați culorile strălucitoare pentru o altă petrecere; acesta este un look clasic de seară.",
     "infoFourTitle": "Transport",
-    "infoFourText": "Dacă aveți nevoie de ajutor pentru transport din Odense către locație, vă rugăm să ne contactați și vom încerca să vă ajutăm cât putem de bine.",
+    "infoFourText": "Dacă aveți nevoie de ajutor cu transportul din Odense către locație, vă rugăm să ne contactați și vom face tot posibilul să ajutăm.",
     "rsvpCtaTitle": "Confirmare",
-    "rsvpCtaText": "Folosește codul invitației pentru a deschide formularul.",
+    "rsvpCtaText": "Folosește codul invitației pentru a deschide formularul RSVP.",
     "codeLabel": "Cod RSVP",
     "codeButton": "Deblochează",
     "invalidCode": "Cod invalid.",
     "countDays": "zile",
     "countHours": "ore",
     "countMinutes": "minute",
-    "countSeconds": "secunde",
-    "menuLink": "TODO: translate menu link",
-    "drinksLink": "TODO: translate drinks link"
+    "countSeconds": "secunde"
+  },
+  "menu": {
+    "title": "Meniu",
+    "subtitle": "O celebrare în trei feluri",
+    "body": "Detaliile meniului vor fi anunțate în curând."
+  },
+  "drinks": {
+    "title": "Carta băuturilor",
+    "subtitle": "Băuturi variate la bar",
+    "body": "Detaliile băuturilor vor fi anunțate în curând."
   },
   "rsvp": {
     "navHome": "Acasă",
@@ -55,10 +65,10 @@
     "invalidCode": "Cod invalid.",
     "nameLabel": "Numele tău",
     "emailLabel": "Email (opțional)",
-    "attendingLabel": "Vei participa?",
+    "attendingLabel": "Veți participa?",
     "yes": "Da",
     "no": "Nu",
-    "plusOneLabel": "Vii cu +1?",
+    "plusOneLabel": "Vii cu un +1?",
     "plusOneNameLabel": "Numele +1",
     "plusOneNamePlaceholder": "Numele invitatului",
     "secondNameLabel": "Numele partenerului",
@@ -78,15 +88,5 @@
     "statusSuccess": "Mulțumim! Am primit răspunsul tău.",
     "statusError": "Ceva nu a mers bine. Te rugăm să încerci din nou.",
     "requiredField": "Te rugăm să completezi câmpurile obligatorii."
-  },
-  "menu": {
-    "title": "TODO: translate menu title",
-    "subtitle": "TODO: translate menu subtitle",
-    "body": "TODO: translate menu body"
-  },
-  "drinks": {
-    "title": "TODO: translate drinks title",
-    "subtitle": "TODO: translate drinks subtitle",
-    "body": "TODO: translate drinks body"
   }
 }
