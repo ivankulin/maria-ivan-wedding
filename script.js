@@ -1,34 +1,38 @@
-// Add invitees here: 1 name => plus one allowed, 2 names => no plus one.
-// Codes are auto-generated from the names (e.g., "Angel Evelin" => ANGEL-EVELIN).
-const invites = [
-  ["Angel", "Evelin"],
-  ["Yosif"],
-  ["Slavi"],
-  ["Stoyan"]
-];
+let codeRules = {};
 
 function toCode(name) {
   return name.trim().toUpperCase().replace(/[^A-Z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
 
-function buildCodeRules(list) {
+function buildCodeRules(invites) {
   const rules = {};
-  list.forEach((names) => {
-    const cleanNames = names.map((name) => name.trim()).filter(Boolean);
+  invites.forEach((invite) => {
+    if (!invite || !Array.isArray(invite.names)) return;
+    const cleanNames = invite.names.map((name) => name.trim()).filter(Boolean);
     if (!cleanNames.length) return;
     const code = cleanNames.map(toCode).join("-");
     rules[code] = {
+      names: cleanNames,
       household: cleanNames.join(" & "),
-      allowPlusOne: cleanNames.length === 1,
-      isCouple: cleanNames.length === 2
+      allowPlusOne: Boolean(invite.allowPlusOne)
     };
   });
   return rules;
 }
 
-const codeRules = buildCodeRules(invites);
+async function loadInvites() {
+  try {
+    const response = await fetch("invites.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("load failed");
+    const data = await response.json();
+    codeRules = buildCodeRules(Array.isArray(data.invites) ? data.invites : []);
+  } catch (error) {
+    codeRules = {};
+  }
+}
 
 const translationCache = {};
+
 let currentIndexStrings = null;
 let currentLang = "en";
 
@@ -89,21 +93,11 @@ function setLanguage(lang, t) {
   if (menuLink) menuLink.textContent = t.menuLink;
   const drinksLink = document.getElementById("drinksLink");
   if (drinksLink) drinksLink.textContent = t.drinksLink;
-  setText("receptionAddressLabel", t.receptionAddressLabel);
-  setText("receptionAddress", t.receptionAddress);
   setText("infoTitle", t.infoTitle);
-  const infoOneTitle = document.getElementById("infoOneTitle");
-  const infoOneText = document.getElementById("infoOneText");
-  if (infoOneTitle) infoOneTitle.textContent = t.infoOneTitle;
-  if (infoOneText) infoOneText.textContent = t.infoOneText;
   setText("infoTwoTitle", t.infoTwoTitle);
   setText("infoTwoText", t.infoTwoText);
   setText("infoThreeTitle", t.infoThreeTitle);
   setText("infoThreeText", t.infoThreeText);
-  const infoFourTitle = document.getElementById("infoFourTitle");
-  const infoFourText = document.getElementById("infoFourText");
-  if (infoFourTitle) infoFourTitle.textContent = t.infoFourTitle;
-  if (infoFourText) infoFourText.textContent = t.infoFourText;
   setText("rsvpCtaTitle", t.rsvpCtaTitle);
   setText("rsvpCtaText", t.rsvpCtaText);
   setText("codeLabel", t.codeLabel);
@@ -167,6 +161,7 @@ async function init() {
   const browserLang = navigator.language.slice(0, 2);
   const initialLang = ["en", "da", "ro", "bg"].includes(browserLang) ? browserLang : "en";
   await switchLanguage(initialLang);
+  await loadInvites();
 
   langButtons.forEach((btn) => {
     btn.addEventListener("click", () => switchLanguage(btn.dataset.lang));

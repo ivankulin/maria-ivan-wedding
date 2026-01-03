@@ -1,0 +1,20 @@
+{
+  "invites": [
+    {
+      "names": ["Angel", "Evelin"],
+      "allowPlusOne": false
+    },
+    {
+      "names": ["Yosif"],
+      "allowPlusOne": true
+    },
+    {
+      "names": ["Slavi"],
+      "allowPlusOne": true
+    },
+    {
+      "names": ["Stoyan"],
+      "allowPlusOne": true
+    }
+  ]
+}

@@ -254,11 +254,11 @@ body {
 }
 
 .hero-image {
-  height: auto;
-  margin-bottom: 28px;
+  height: 300px;
   width: 100%;
-  aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: top center;
+  border: 1px solid var(--panel-border);
   display: block;
 }
 
@@ -269,25 +269,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  align-items: center;
-}
-
-.hero-panel .hero-image {
-  height: 300px;
-  border: none;
-  border-bottom: 1px solid var(--panel-border);
-  border-top: 1px solid var(--panel-border);
-  width: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-  max-width: 100%;
+  align-items: stretch;
 }
 
 .hero-panel .countdown {
   border-top: 1px solid var(--panel-border);
   padding-top: 12px;
-  width: min(100%, clamp(360px, 70vw, 720px));
+  width: 100%;
 }
 
 .hero-media {
