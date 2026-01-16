@@ -141,7 +141,7 @@ function verifyCode() {
 }
 
 function updateCountdown() {
-  const target = new Date(2026, 5, 27, 15, 0, 0);
+  const target = new Date(2026, 6, 27, 15, 0, 0);
   const now = new Date();
   let diff = Math.max(0, target - now);
 
@@ -155,6 +155,53 @@ function updateCountdown() {
   if (countHoursEl) countHoursEl.textContent = `${hours}`;
   if (countMinutesEl) countMinutesEl.textContent = `${minutes}`;
   if (countSecondsEl) countSecondsEl.textContent = `${seconds}`;
+}
+
+function initReveal() {
+  const sections = Array.from(document.querySelectorAll(".content > section"))
+    .filter((section) => !section.classList.contains("hero"));
+
+  if (!sections.length) return;
+
+  sections.forEach((section, index) => {
+    section.classList.add("reveal");
+    section.style.setProperty("--reveal-delay", `${index * 80}ms`);
+  });
+
+  if (!("IntersectionObserver" in window)) {
+    sections.forEach((section) => section.classList.add("is-visible"));
+    return;
+  }
+
+  const revealAfterPaint = (fn) => {
+    requestAnimationFrame(() => requestAnimationFrame(fn));
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          requestAnimationFrame(() => {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          });
+        }
+      });
+    },
+    { rootMargin: "0px 0px -10% 0px", threshold: 0.15 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  revealAfterPaint(() => {
+    sections.forEach((section) => {
+      const top = section.getBoundingClientRect().top;
+      if (top < window.innerHeight * 0.85) {
+        section.classList.add("is-visible");
+        observer.unobserve(section);
+      }
+    });
+  });
 }
 
 async function init() {
@@ -177,6 +224,7 @@ async function init() {
 
   updateCountdown();
   setInterval(updateCountdown, 1000);
+  initReveal();
 }
 
 init();

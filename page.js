@@ -58,6 +58,51 @@ async function switchLanguage(lang) {
   setLanguage(currentLang, data);
 }
 
+function initReveal() {
+  const sections = Array.from(document.querySelectorAll(".content > section"));
+  if (!sections.length) return;
+
+  sections.forEach((section, index) => {
+    section.classList.add("reveal");
+    section.style.setProperty("--reveal-delay", `${index * 80}ms`);
+  });
+
+  if (!("IntersectionObserver" in window)) {
+    sections.forEach((section) => section.classList.add("is-visible"));
+    return;
+  }
+
+  const revealAfterPaint = (fn) => {
+    requestAnimationFrame(() => requestAnimationFrame(fn));
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          requestAnimationFrame(() => {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          });
+        }
+      });
+    },
+    { rootMargin: "0px 0px -10% 0px", threshold: 0.15 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  revealAfterPaint(() => {
+    sections.forEach((section) => {
+      const top = section.getBoundingClientRect().top;
+      if (top < window.innerHeight * 0.85) {
+        section.classList.add("is-visible");
+        observer.unobserve(section);
+      }
+    });
+  });
+}
+
 async function init() {
   const params = new URLSearchParams(window.location.search);
   const urlLang = params.get("lang");
@@ -69,6 +114,8 @@ async function init() {
   langButtons.forEach((btn) => {
     btn.addEventListener("click", () => switchLanguage(btn.dataset.lang));
   });
+
+  initReveal();
 }
 
 init();
