@@ -141,7 +141,7 @@ function verifyCode() {
 }
 
 function updateCountdown() {
-  const target = new Date(2026, 6, 27, 15, 0, 0);
+  const target = new Date(2026, 5, 27, 15, 0, 0);
   const now = new Date();
   let diff = Math.max(0, target - now);
 
@@ -209,6 +209,23 @@ async function init() {
   const initialLang = ["en", "da", "ro", "bg"].includes(browserLang) ? browserLang : "en";
   await switchLanguage(initialLang);
   await loadInvites();
+
+  const intro = document.getElementById("inviteIntro");
+  const introButton = document.getElementById("inviteEnter");
+  if (intro && introButton) {
+    const hasSeenIntro = sessionStorage.getItem("inviteIntroSeen") === "1";
+    if (hasSeenIntro) {
+      intro.classList.add("is-hidden");
+    } else {
+      document.body.classList.add("is-locked");
+      introButton.addEventListener("click", () => {
+        intro.classList.add("is-open");
+        intro.classList.add("is-hidden");
+        document.body.classList.remove("is-locked");
+        sessionStorage.setItem("inviteIntroSeen", "1");
+      });
+    }
+  }
 
   langButtons.forEach((btn) => {
     btn.addEventListener("click", () => switchLanguage(btn.dataset.lang));
