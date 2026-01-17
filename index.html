@@ -7,15 +7,37 @@
   <meta name="description" content="Maria and Ivan wedding celebration. RSVP online.">
   <link rel="icon" href="im_icon.png" type="image/png">
   <link rel="apple-touch-icon" href="im_icon.png">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <div class="invite-intro" id="inviteIntro" role="dialog" aria-modal="true" aria-labelledby="inviteTitle">
-    <div class="invite-curtain invite-curtain--left" aria-hidden="true"></div>
-    <div class="invite-curtain invite-curtain--right" aria-hidden="true"></div>
+    <div class="invite-curtain invite-curtain--left" aria-hidden="true">
+      <span class="curtain-monogram" data-letter="M">M</span>
+    </div>
+    <div class="invite-curtain invite-curtain--right" aria-hidden="true">
+      <span class="curtain-monogram curtain-monogram--right" data-letter="I">I</span>
+    </div>
     <div class="invite-panel">
-      <p class="invite-subtitle">You are invited</p>
-      <p class="invite-subtitle">to the wedding of</p>
+      <div class="lang-switcher panel invite-lang-switcher" role="group" aria-label="Language switcher">
+        <button type="button" data-lang="en" aria-pressed="true">
+          <span class="flag flag-en" aria-hidden="true"></span>
+          <span class="lang-label">EN</span>
+        </button>
+        <button type="button" data-lang="da" aria-pressed="false">
+          <span class="flag flag-da" aria-hidden="true"></span>
+          <span class="lang-label">DA</span>
+        </button>
+        <button type="button" data-lang="ro" aria-pressed="false">
+          <span class="flag flag-ro" aria-hidden="true"></span>
+          <span class="lang-label">RO</span>
+        </button>
+        <button type="button" data-lang="bg" aria-pressed="false">
+          <span class="flag flag-bg" aria-hidden="true"></span>
+          <span class="lang-label">BG</span>
+        </button>
+      </div>
+      <p class="invite-subtitle" id="inviteLineOne">You are invited</p>
+      <p class="invite-subtitle" id="inviteLineTwo">to the wedding of</p>
       <h1 class="invite-title-line">Maria</h1>
       <h1 class="invite-title-line">&</h1>
       <h1 class="invite-title-line">Ivan</h1>

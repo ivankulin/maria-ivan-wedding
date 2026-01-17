@@ -79,6 +79,9 @@ function setLanguage(lang, t) {
   setText("navRsvp", t.navRsvp);
   setText("welcomeTitle", t.welcomeTitle);
   setText("welcomeText", t.welcomeText);
+  setText("inviteLineOne", t.inviteLineOne);
+  setText("inviteLineTwo", t.inviteLineTwo);
+  setText("inviteEnter", t.inviteButton);
   setText("detailsTitle", t.detailsTitle);
   setText("detailsText", t.detailsText);
   setText("ceremonyTitle", t.ceremonyTitle);
@@ -220,9 +223,11 @@ async function init() {
       document.body.classList.add("is-locked");
       introButton.addEventListener("click", () => {
         intro.classList.add("is-open");
-        intro.classList.add("is-hidden");
-        document.body.classList.remove("is-locked");
-        sessionStorage.setItem("inviteIntroSeen", "1");
+        window.setTimeout(() => {
+          intro.classList.add("is-hidden");
+          document.body.classList.remove("is-locked");
+          sessionStorage.setItem("inviteIntroSeen", "1");
+        }, 900);
       });
     }
   }
