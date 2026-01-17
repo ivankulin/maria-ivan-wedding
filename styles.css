@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@300;400;500&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Beau+Rivage&family=Italianno&family=Marck+Script&family=Work+Sans:wght@300;400;500&display=swap');
 
 :root {
   --bg: #ffffff;
@@ -136,16 +136,15 @@ body.is-locked {
   inset: 0;
   display: grid;
   align-items: center;
-  justify-items: start;
-  padding-left: clamp(18px, 6vw, 72px);
-  font-family: var(--display);
-  font-size: min(90vh, 52vw);
+  justify-items: center;
+  padding: 0;
+  font-family: 'Beau Rivage';
+  font-size: min(40vh, 40vw);
   line-height: 1;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 4px #000000;
-  mix-blend-mode: multiply;
   pointer-events: none;
 }
 
@@ -162,35 +161,25 @@ body.is-locked {
   font: inherit;
   letter-spacing: inherit;
   text-transform: inherit;
-  color: rgba(0, 0, 0, 0.68);
-  filter: blur(1.2px);
-  text-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.18),
-    2px -2px 0 rgba(34, 34, 34, 0.08);
+  color: rgba(0, 0, 0, 0.48);
+  filter: blur(2.2px);
   pointer-events: none;
 }
 
 .curtain-monogram--right {
-  justify-items: end;
-  padding-left: 0;
-  padding-right: clamp(18px, 6vw, 72px);
-  filter: blur(1.4px);
-  text-shadow:
-    -2px 2px 0 rgba(34, 34, 34, 0.1),
-    3px -3px 0 rgba(34, 34, 34, 0.08),
-    0 12px 26px rgba(0, 0, 0, 0.2);
+  justify-items: center;
+  padding: 0;
   transform: translateY(-2px) skewX(-4deg) rotate(-1deg);
 }
 
 @media (orientation: portrait) {
   .curtain-monogram {
-    font-size: min(45vw, 100vh);
-    padding-left: clamp(10px, 1vw, 32px);
-    padding-top: clamp(12px, 1vh, 72px);
+    font-size: min(40vh, 40vw);
+    padding: 0;
   }
 
   .curtain-monogram--right {
-    padding-right: clamp(10px, 1vw, 32px);
+    padding: 0;
   }
 }
 
@@ -213,7 +202,7 @@ body.is-locked {
   padding: 36px 32px;
   border: 1px solid var(--panel-border);
   background: #ffffff;
-  opacity: 0.88;
+  opacity: 0.78;
   box-shadow: 0 24px 50px var(--veil);
   max-width: 520px;
   width: calc(100% - 64px);
@@ -239,6 +228,22 @@ body.is-locked {
   text-transform: uppercase;
   font-size: clamp(2.4rem, 6vw, 4.2rem);
 }
+
+.invite-title {
+  margin: 0;
+  font-family: 'Italianno', 'Marck Script';
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-weight: 200;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  line-height: 1.1;
+}
+
+.invite-title:lang(bg) {
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
 
 .invite-title-line {
   line-height: 1.05;
