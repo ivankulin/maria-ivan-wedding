@@ -78,33 +78,45 @@ async function loadTranslations(lang) {
 function setLanguage(lang, t) {
   if (!t) return;
 
+  const setText = (id, value) => {
+    const el = document.getElementById(id);
+    if (el && value !== undefined && value !== null) {
+      el.textContent = value;
+    }
+  };
+
   document.documentElement.lang = lang;
-  document.getElementById("navHome").textContent = t.navHome;
-  document.getElementById("navCeremony").textContent = t.navCeremony;
-  document.getElementById("navReception").textContent = t.navReception;
-  document.getElementById("navInfo").textContent = t.navInfo;
-  document.getElementById("navRsvp").textContent = t.navRsvp;
-  document.getElementById("rsvpTitle").textContent = t.rsvpTitle;
-  document.getElementById("rsvpIntro").textContent = t.rsvpIntro;
-  document.getElementById("nameLabel").textContent = t.nameLabel;
-  document.getElementById("emailLabel").textContent = t.emailLabel;
-  document.getElementById("attendingLabel").textContent = t.attendingLabel;
-  document.getElementById("yesOption").textContent = t.yes;
-  document.getElementById("noOption").textContent = t.no;
-  document.getElementById("secondNameLabel").textContent = t.secondNameLabel;
-  document.getElementById("secondName").setAttribute("placeholder", t.secondNamePlaceholder);
-  document.getElementById("overnightLabel").textContent = t.overnightLabel;
-  document.getElementById("overnightYes").textContent = t.overnightYes;
-  document.getElementById("overnightNo").textContent = t.overnightNo;
-  document.getElementById("overnightDatesLabel").textContent = t.overnightDatesLabel;
-  document.getElementById("overnightDate1").textContent = t.overnightDate1;
-  document.getElementById("overnightDate2").textContent = t.overnightDate2;
-  document.getElementById("overnightDate3").textContent = t.overnightDate3;
-  document.getElementById("overnightDate4").textContent = t.overnightDate4;
-  document.getElementById("overnightDate5").textContent = t.overnightDate5;
-  document.getElementById("notesLabel").textContent = t.notesLabel;
-  document.getElementById("notes").setAttribute("placeholder", t.notesPlaceholder);
-  document.getElementById("submitBtn").textContent = t.submit;
+  setText("navHome", t.navHome);
+  setText("navCeremony", t.navCeremony);
+  setText("navReception", t.navReception);
+  setText("navInfo", t.navInfo);
+  setText("navRsvp", t.navRsvp);
+  setText("rsvpTitle", t.rsvpTitle);
+  setText("rsvpIntro", t.rsvpIntro);
+  setText("nameLabel", t.nameLabel);
+  setText("emailLabel", t.emailLabel);
+  setText("attendingLabel", t.attendingLabel);
+  setText("yesOption", t.yes);
+  setText("noOption", t.no);
+  setText("secondNameLabel", t.secondNameLabel);
+  const secondNameEl = document.getElementById("secondName");
+  if (secondNameEl && t.secondNamePlaceholder) {
+    secondNameEl.setAttribute("placeholder", t.secondNamePlaceholder);
+  }
+  setText("overnightLabel", t.overnightLabel);
+  setText("overnightYes", t.overnightYes);
+  setText("overnightNo", t.overnightNo);
+  setText("overnightDatesLabel", t.overnightDatesLabel);
+  setText("overnightDate1", t.overnightDate1);
+  setText("overnightDate2", t.overnightDate2);
+  setText("overnightDate3", t.overnightDate3);
+  setText("overnightDate4", t.overnightDate4);
+  setText("notesLabel", t.notesLabel);
+  const notesEl = document.getElementById("notes");
+  if (notesEl && t.notesPlaceholder) {
+    notesEl.setAttribute("placeholder", t.notesPlaceholder);
+  }
+  setText("submitBtn", t.submit);
 
   if (plusOneRow) {
     plusOneRow.querySelector("#plusOneLabel").textContent = t.plusOneLabel;
