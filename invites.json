@@ -15,6 +15,10 @@
     {
       "names": ["Stoyan"],
       "allowPlusOne": true
+    },
+    {
+      "names": ["Andrea","Christian"],
+      "allowPlusOne": false
     }
   ]
 }
