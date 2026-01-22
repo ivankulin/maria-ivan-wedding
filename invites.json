@@ -19,6 +19,14 @@
     {
       "names": ["Andrea","Christian"],
       "allowPlusOne": false
+    },
+    {
+      "names": ["Peter","Velina"],
+      "allowPlusOne": false
+    },
+    {
+      "names": ["Kiril"],
+      "allowPlusOne": true
     }
   ]
 }
