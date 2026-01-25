@@ -75,6 +75,10 @@
         {
       "names": ["Maria"],
       "allowPlusOne": false
-    }, 
+    },  
+        {
+      "names": ["Soeren"],
+      "allowPlusOne": false
+    }
   ]
 }
