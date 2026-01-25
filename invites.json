@@ -71,14 +71,38 @@
     {
       "names": ["Maria"],
       "allowPlusOne": true
-    }, 
-        {
-      "names": ["Maria"],
-      "allowPlusOne": false
-    },  
-        {
+    },
+    {
       "names": ["Soeren"],
+      "allowPlusOne": true
+    },
+    {
+      "names": ["Titas"],
+      "allowPlusOne": true
+    },
+    {
+      "names": ["Darius"],
+      "allowPlusOne": true
+    },
+    {
+      "names": ["Matej"],
+      "allowPlusOne": true
+    },
+    {
+      "names": ["Paulius", "Alina"],
       "allowPlusOne": false
+    },
+    {
+      "names": ["Takis"],
+      "allowPlusOne": true
+    },
+    {
+      "names": ["Jevegeni"],
+      "allowPlusOne": true
+    },
+    {
+      "names": ["Luca"],
+      "allowPlusOne": true
     }
   ]
 }
