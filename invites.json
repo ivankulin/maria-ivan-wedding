@@ -1,108 +1,30 @@
 {
   "invites": [
-    {
-      "names": ["Andrea","Christian"],
-      "allowPlusOne": false
-    },
-    {
-      "names": ["Peter","Velina"],
-      "allowPlusOne": false
-    },
-    {
-      "names": ["Kiril"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Mariyan"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Angel", "Evelin"],
-      "allowPlusOne": false
-    },
-    {
-      "names": ["Yosif"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Slavi"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Blagoy","Bilyana"],
-      "allowPlusOne": false
-    },
-    {
-      "names": ["Georgi","Magdalena"],
-      "allowPlusOne": false
-    },
-    {
-      "names": ["Stoyan"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Dimitar"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Alex"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Kaloyan"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Vasil"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Elena"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Deivid","Siyana"],
-      "allowPlusOne": false
-    },
-    {
-      "names": ["Blagoy","Viktoria"],
-      "allowPlusOne": false
-    },
-    {
-      "names": ["Maria"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Soeren"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Titas"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Darius"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Matej"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Paulius", "Alina"],
-      "allowPlusOne": false
-    },
-    {
-      "names": ["Takis"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Jevegeni"],
-      "allowPlusOne": true
-    },
-    {
-      "names": ["Luca"],
-      "allowPlusOne": true
-    }
+    { "names": ["Andrea", "Christian"] },
+    { "names": ["Peter", "Velina"] },
+    { "names": ["Kiril"] },
+    { "names": ["Mariyan"] },
+    { "names": ["Angel", "Evelin"] },
+    { "names": ["Yosif"] },
+    { "names": ["Slavi"] },
+    { "names": ["Blagoy", "Bilyana"] },
+    { "names": ["Georgi", "Magdalena"] },
+    { "names": ["Stoyan"] },
+    { "names": ["Dimitar"] },
+    { "names": ["Alex"] },
+    { "names": ["Kaloyan"] },
+    { "names": ["Vasil"] },
+    { "names": ["Elena"] },
+    { "names": ["Deivid", "Siyana"] },
+    { "names": ["Blagoy", "Viktoria"] },
+    { "names": ["Maria"] },
+    { "names": ["Soeren"] },
+    { "names": ["Titas"] },
+    { "names": ["Darius"] },
+    { "names": ["Matej"] },
+    { "names": ["Paulius", "Alina"] },
+    { "names": ["Takis"] },
+    { "names": ["Jevgeni"] },
+    { "names": ["Luca"] }
   ]
 }

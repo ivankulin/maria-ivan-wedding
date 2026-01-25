@@ -11,10 +11,11 @@ function buildCodeRules(invites) {
     const cleanNames = invite.names.map((name) => name.trim()).filter(Boolean);
     if (!cleanNames.length) return;
     const code = cleanNames.map(toCode).join("-");
+    const allowPlusOne = cleanNames.length === 1;
     rules[code] = {
       names: cleanNames,
       household: cleanNames.join(" & "),
-      allowPlusOne: Boolean(invite.allowPlusOne)
+      allowPlusOne
     };
   });
   return rules;
