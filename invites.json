@@ -1,6 +1,22 @@
 {
   "invites": [
     {
+      "names": ["Andrea","Christian"],
+      "allowPlusOne": false
+    },
+    {
+      "names": ["Peter","Velina"],
+      "allowPlusOne": false
+    },
+    {
+      "names": ["Kiril"],
+      "allowPlusOne": true
+    },
+    {
+      "names": ["Mariyan"],
+      "allowPlusOne": true
+    },
+    {
       "names": ["Angel", "Evelin"],
       "allowPlusOne": false
     },
@@ -13,20 +29,48 @@
       "allowPlusOne": true
     },
     {
+      "names": ["Blagoy","Bilyana"],
+      "allowPlusOne": false
+    },
+    {
+      "names": ["Georgi","Magdalena"],
+      "allowPlusOne": false
+    },
+    {
       "names": ["Stoyan"],
       "allowPlusOne": true
     },
     {
-      "names": ["Andrea","Christian"],
-      "allowPlusOne": false
-    },
-    {
-      "names": ["Peter","Velina"],
-      "allowPlusOne": false
-    },
-    {
-      "names": ["Kiril"],
+      "names": ["Dimitar"],
       "allowPlusOne": true
+    },
+    {
+      "names": ["Alex"],
+      "allowPlusOne": false
+    },
+    {
+      "names": ["Kaloyan"],
+      "allowPlusOne": false
+    },
+    {
+      "names": ["Vasil"],
+      "allowPlusOne": false
+    },
+    {
+      "names": ["Elena"],
+      "allowPlusOne": false
+    },
+    {
+      "names": ["Deivid","Siyana"],
+      "allowPlusOne": false
+    },
+    {
+      "names": ["Blagoy","Viktoria"],
+      "allowPlusOne": false
+    },
+    {
+      "names": ["Maria"],
+      "allowPlusOne": false
     }
   ]
 }
