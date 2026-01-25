@@ -46,19 +46,19 @@
     },
     {
       "names": ["Alex"],
-      "allowPlusOne": false
+      "allowPlusOne": true
     },
     {
       "names": ["Kaloyan"],
-      "allowPlusOne": false
+      "allowPlusOne": true
     },
     {
       "names": ["Vasil"],
-      "allowPlusOne": false
+      "allowPlusOne": true
     },
     {
       "names": ["Elena"],
-      "allowPlusOne": false
+      "allowPlusOne": true
     },
     {
       "names": ["Deivid","Siyana"],
@@ -70,7 +70,11 @@
     },
     {
       "names": ["Maria"],
+      "allowPlusOne": true
+    }, 
+        {
+      "names": ["Maria"],
       "allowPlusOne": false
-    }
+    }, 
   ]
 }
